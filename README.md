@@ -1,37 +1,20 @@
-## Welcome to GitHub Pages
+## Tytuł projektu: SPAproject
 
-You can use the [editor on GitHub](https://github.com/kkasztann/SPAproject/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+### Opis projektu:
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id blandit magna. Proin facilisis, orci sit amet ultricies fringilla, mi ante sodales libero, ac accumsan eros neque a enim. Praesent vel lacinia odio. Nulla facilisi. Donec vestibulum condimentum urna eu sagittis. Cras vitae urna non dui tristique rhoncus. Vestibulum ut condimentum magna. Suspendisse ante risus, scelerisque non ipsum non, consectetur semper odio. Aliquam elementum odio libero, sit amet imperdiet orci vestibulum vitae. Vivamus in metus efficitur, laoreet tellus id, semper eros.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+  Integer elementum sem id arcu condimentum finibus. Praesent volutpat vel lorem sed maximus. Proin at ex a dolor vulputate malesuada quis quis eros. Nulla eget euismod nunc. Nam accumsan dapibus neque et consectetur. Curabitur sapien ante, venenatis finibus tincidunt non, dictum in ligula. Vestibulum suscipit nisl tempor lacinia rhoncus. Aliquam porttitor vitae turpis a lacinia. Cras pellentesque risus ut feugiat maximus. Morbi placerat ac nisl id sodales. Vivamus et viverra nulla. Donec pulvinar velit dui, id hendrerit arcu pretium a. Nunc accumsan ultricies velit, sed fringilla velit pellentesque et. Morbi commodo sapien et semper sodales. Sed malesuada tellus et tristique convallis. Vivamus vel ipsum at mi cursus semper.
 
-### Markdown
+### Skład zespołu projektowego:
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+1. Słowik Daniel
+2. Otręba Mateusz
 
-```markdown
-Syntax highlighted code block
+### Link do systemu zarządzania projektem:
+[Trello - SPAproject](https://trello.com/b/fFfcexlA/spaproject)
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/kkasztann/SPAproject/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+### Prototyp Projektu
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id blandit magna. Proin facilisis, orci sit amet ultricies fringilla, mi ante sodales libero, ac accumsan eros neque a enim. Praesent vel lacinia odio. Nulla facilisi. Donec vestibulum condimentum urna eu sagittis. Cras vitae urna non dui tristique rhoncus. Vestibulum ut condimentum magna. Suspendisse ante risus, scelerisque non ipsum non, consectetur semper odio. Aliquam elementum odio libero, sit amet imperdiet orci vestibulum vitae. Vivamus in metus efficitur, laoreet tellus id, semper eros.
+  
+  ### Raport prac każdego członka zespołu
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id blandit magna. Proin facilisis, orci sit amet ultricies fringilla, mi ante sodales libero, ac accumsan eros neque a enim. Praesent vel lacinia odio. Nulla facilisi. Donec vestibulum condimentum urna eu sagittis. Cras vitae urna non dui tristique rhoncus. Vestibulum ut condimentum magna. Suspendisse ante risus, scelerisque non ipsum non, consectetur semper odio. Aliquam elementum odio libero, sit amet imperdiet orci vestibulum vitae. Vivamus in metus efficitur, laoreet tellus id, semper eros.
