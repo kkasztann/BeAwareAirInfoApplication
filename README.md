@@ -12,8 +12,8 @@
 [Trello - SPAproject](https://trello.com/b/fFfcexlA/beawareairinfoapplication)
 
 ### Prototyp Projektu
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id blandit magna. Proin facilisis, orci sit amet ultricies fringilla, mi ante sodales libero, ac accumsan eros neque a enim. Praesent vel lacinia odio. Nulla facilisi. Donec vestibulum condimentum urna eu sagittis. Cras vitae urna non dui tristique rhoncus. Vestibulum ut condimentum magna. Suspendisse ante risus, scelerisque non ipsum non, consectetur semper odio. Aliquam elementum odio libero, sit amet imperdiet orci vestibulum vitae. Vivamus in metus efficitur, laoreet tellus id, semper eros.
+  Znajduje się w folderze [ApplicationPrototype](https://github.com/kkasztann/BeAwareAirInfoApplication/tree/master/ApplicationPrototype)
   
 ### Raport prac każdego członka zespołu
   
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id blandit magna. Proin facilisis, orci sit amet ultricies fringilla, mi ante sodales libero, ac accumsan eros neque a enim. Praesent vel lacinia odio. Nulla facilisi. Donec vestibulum condimentum urna eu sagittis. Cras vitae urna non dui tristique rhoncus. Vestibulum ut condimentum magna. Suspendisse ante risus, scelerisque non ipsum non, consectetur semper odio. Aliquam elementum odio libero, sit amet imperdiet orci vestibulum vitae. Vivamus in metus efficitur, laoreet tellus id, semper eros.
+  Raport zostanie pobrany z platformy Toggle
