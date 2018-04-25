@@ -13,6 +13,9 @@ import { MDataComponent } from './m-data/m-data.component';
 import { MUserComponent } from './m-user/m-user.component';
 import { MHelpComponent } from './m-help/m-help.component';
 import { MLocationComponent } from './m-location/m-location.component';
+import { MHelpAboutComponent } from './m-help/m-help-about/m-help-about.component';
+import { MHelpSupportComponent } from './m-help/m-help-support/m-help-support.component';
+import { MHelpRateComponent } from './m-help/m-help-rate/m-help-rate.component';
 
 
 
@@ -24,6 +27,9 @@ import { MLocationComponent } from './m-location/m-location.component';
     MUserComponent,
     MHelpComponent,
     MLocationComponent,
+    MHelpAboutComponent,
+    MHelpSupportComponent,
+    MHelpRateComponent,
   ],
   imports: [
     BrowserModule,
