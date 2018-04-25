@@ -1,0 +1,68 @@
+<div class ="photo"> Miejsce na zdjecie/ logo  </div>
+<div class= "messages"> Miejsce na komunikaty</div>
+<div style="height: 80vh;">
+
+  <mat-toolbar color="primary">
+
+
+
+    <span class="example-spacer"></span>
+
+    <div fxShow="true" fxHide.lt-md="true">
+
+      <!-- The following menu items will be hidden on both SM and XS screen sizes -->
+
+      <a mat-button>Home</a>
+
+      <a mat-button>Location</a>
+
+      <a mat-button>User</a>
+
+      <a mat-button>Data</a>
+
+      <a mat-button>Help</a>
+
+    </div>
+
+    <div fxShow="true" fxHide.gt-sm="true">
+
+      <a (click)="sidenav.toggle()">Show Side Menu</a>
+
+    </div>
+
+
+
+
+
+  </mat-toolbar>
+
+  <mat-sidenav-container fxFlexFill class="example-container">
+
+    <mat-sidenav #sidenav fxLayout="column">
+
+      <div fxLayout="column">
+
+        <a (click)="sidenav.toggle()" mat-button>Close</a>
+
+        <a mat-button>Menu Item 1</a>
+
+        <a mat-button>Menu Item 2</a>
+
+        <a mat-button>Menu Item 3</a>
+
+        <a mat-button>Menu Item 4</a>
+
+        <a mat-button>Menu Item 5</a>
+
+        <a mat-button>Menu Item 6</a>
+
+      </div>
+
+    </mat-sidenav>
+
+    <mat-sidenav-content fxFlexFill class ="Main-content"><app-m-data></app-m-data> </mat-sidenav-content>
+
+  </mat-sidenav-container>
+  <div class ="footer"> Tutaj będzie jakas stopka</div>
+
+</div>
