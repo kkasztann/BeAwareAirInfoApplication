@@ -1,8 +1,8 @@
-<div class ="photo"> Miejsce na zdjecie/ logo  </div>
-<div class= "messages"> Miejsce na komunikaty</div>
+<div class="photo"> Miejsce na zdjecie/ logo </div>
+<div class="messages"> Miejsce na komunikaty</div>
 <div style="height: 80vh;">
 
-  <mat-toolbar color="primary">
+  <div color="primary">
 
 
 
@@ -12,15 +12,42 @@
 
       <!-- The following menu items will be hidden on both SM and XS screen sizes -->
 
-      <a mat-button>Home</a>
 
-      <a mat-button>Location</a>
+      <div class="other ">
+          <button type="button" href="#" class="btn btn-primary">Home</button>
+          <div class="dropdown">
+            <button type="button" href="#" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Location</button>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="#">Current Location</a>
+              </li>
+              <li>
+                <a href="#">Default Location</a>
+              </li>
+              <li>
+                <a href="#">Search Location</a>
+              </li>
+            </ul>
+          </div>
+          <button type="button" href="#" class="btn btn-primary">User</button>
+          <button type="button" href="#" class="btn btn-primary">Data</button>
+          <div class="dropdown" >
+            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Help
+            </button>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="#">About BeAware</a>
+              </li>
+              <li>
+                <a href="#">Support</a>
+              </li>
+              <li>
+                <a href="#">Rate</a>
+              </li>
+            </ul>
 
-      <a mat-button>User</a>
-
-      <a mat-button>Data</a>
-
-      <a mat-button>Help</a>
+          </div>
+      </div>
 
     </div>
 
@@ -34,7 +61,7 @@
 
 
 
-  </mat-toolbar>
+  </div>
 
   <mat-sidenav-container fxFlexFill class="example-container">
 
@@ -44,25 +71,56 @@
 
         <a (click)="sidenav.toggle()" mat-button>Close</a>
 
-        <a mat-button>Menu Item 1</a>
 
-        <a mat-button>Menu Item 2</a>
+        <button type="button" href="#" class="btn btn-primary">Home</button>
+        <div class="dropdown">
+          <button type="button" href="#" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Location</button>
+          <ul class="dropdown-menu">
+            <li>
+              <a href="#">Current Location</a>
+            </li>
+            <li>
+              <a href="#">Default Location</a>
+            </li>
+            <li>
+              <a href="#">Search Location</a>
+            </li>
+          </ul>
+        </div>
+        <button type="button" href="#" class="btn btn-primary">User</button>
+        <button type="button" href="#" class="btn btn-primary">Data</button>
 
-        <a mat-button>Menu Item 3</a>
+        <div class="dropdown" >
+          <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Help
+          </button>
+          <ul class="dropdown-menu">
+            <li>
+              <a href="#">About BeAware</a>
+            </li>
+            <li>
+              <a href="#">Support</a>
+            </li>
+            <li>
+              <a href="#">Rate</a>
+            </li>
+          </ul>
 
-        <a mat-button>Menu Item 4</a>
-
-        <a mat-button>Menu Item 5</a>
-
-        <a mat-button>Menu Item 6</a>
+        </div>
 
       </div>
 
+
+
     </mat-sidenav>
 
-    <mat-sidenav-content fxFlexFill class ="Main-content"><app-m-user></app-m-user> </mat-sidenav-content>
+    <mat-sidenav-content fxFlexFill class="Main-content">
+
+
+
+
+    </mat-sidenav-content>
 
   </mat-sidenav-container>
-  <div class ="footer"> Tutaj będzie jakas stopka</div>
+  <div class="footer"> Tutaj będzie jakas stopka</div>
 
 </div>
