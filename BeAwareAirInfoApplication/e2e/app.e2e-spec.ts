@@ -1,6 +1,6 @@
 import { AppPage } from './app.po';
 
-describe('be-aware-air-info-application App', () => {
+describe('my-interface App', () => {
   let page: AppPage;
 
   beforeEach(() => {

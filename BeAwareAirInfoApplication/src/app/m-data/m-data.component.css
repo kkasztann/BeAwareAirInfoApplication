@@ -1,0 +1,36 @@
+.first{
+  margin: 50px;
+  display: inline-block;
+  width: 350px;
+  height: 350px;
+  background: brown;
+}
+.second{
+  margin: 50px;
+  display: inline-block;
+  width: 350px;
+  height: 350px;
+  background: rgb(201, 24, 24);
+}
+.third{
+  margin: 50px;
+  display: inline-block;
+  width: 350px;
+  height: 350px;
+  background: rgb(187, 132, 132);
+}
+.fourth{
+  margin: 50px;
+  display: inline-block;
+  width: 350px;
+  height: 350px;
+  background: rgb(41, 21, 21);
+}
+.dataBoard{
+
+  width: 1000px;
+  margin-left: auto;
+	margin-right: auto;
+  text-align: center;
+
+}
