@@ -1,1 +1,5 @@
-<div class = "helpContainer"> <app-m-help-rate> </app-m-help-rate> </div>
+<div class = "helpContainer"> <app-m-help-about *ngIf ="visibleAbout" > </app-m-help-about>
+  <app-m-help-support *ngIf="visibleSupport"></app-m-help-support>
+  <app-m-help-rate *ngIf="visibleRate"></app-m-help-rate>
+</div>
+

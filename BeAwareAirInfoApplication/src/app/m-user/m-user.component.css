@@ -1,9 +1,9 @@
 .Personal {
   padding: 20px;
-  margin-top: 30px;
+
   background: white;
-  width: 400px;
-  height: 200px;
+  width: 450px;
+  height: 300px;
   margin-left: auto;
   margin-right: auto;
   font-size: 17px;
@@ -13,8 +13,9 @@
 
   padding: 20px;
   margin-top: 30px;
+
   background: white;
-  width: 400px;
+  width: 450px;
   height: auto;
   margin-left: auto;
   margin-right: auto;
@@ -41,6 +42,12 @@
   margin-right: auto;
 }
 
-
-
+.User-container{
+ background: blue;
+height: auto;
+width: 700px;
+margin-left: auto;
+margin-right: auto;
+padding: 30px;
+}
 

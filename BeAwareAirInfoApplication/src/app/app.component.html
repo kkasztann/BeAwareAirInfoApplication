@@ -6,17 +6,17 @@
 
 
 
-    <span class="example-spacer"></span>
+
 
     <div fxShow="true" fxHide.lt-md="true">
 
       <!-- The following menu items will be hidden on both SM and XS screen sizes -->
 
 
-      <div class="other ">
-          <button type="button" href="#" class="btn btn-primary">Home</button>
+      <div class="button-group ">
+          <button (click) = "toggleHome()" type="button" href="#" class="btn btn-primary">Home</button>
           <div class="dropdown">
-            <button type="button" href="#" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Location</button>
+            <button (click) = "toggleLocation()" type="button" href="#" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Location</button>
             <ul class="dropdown-menu">
               <li>
                 <a href="#">Current Location</a>
@@ -29,10 +29,10 @@
               </li>
             </ul>
           </div>
-          <button type="button" href="#" class="btn btn-primary">User</button>
-          <button type="button" href="#" class="btn btn-primary">Data</button>
+          <button (click) = "toggleUser()" type="button" href="#" class="btn btn-primary">User</button>
+          <button (click) = "toggleData()"  type="button" href="#" class="btn btn-primary">Data</button>
           <div class="dropdown" >
-            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Help
+            <button (click) = "toggleHelp()"  class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Help
             </button>
             <ul class="dropdown-menu">
               <li>
@@ -95,7 +95,7 @@
           </button>
           <ul class="dropdown-menu">
             <li>
-              <a href="#">About BeAware</a>
+              <a  href="#">About BeAware</a>
             </li>
             <li>
               <a href="#">Support</a>
@@ -115,8 +115,11 @@
 
     <mat-sidenav-content fxFlexFill class="Main-content">
 
-
-
+      <app-m-home *ngIf ="visibleHome" ></app-m-home>
+      <app-m-location *ngIf="visibleLocation"></app-m-location>
+      <app-m-user *ngIf="visibleUser"></app-m-user>
+      <app-m-data *ngIf="visibleData"></app-m-data>
+      <app-m-help *ngIf="visibleHelp"></app-m-help>
 
     </mat-sidenav-content>
 

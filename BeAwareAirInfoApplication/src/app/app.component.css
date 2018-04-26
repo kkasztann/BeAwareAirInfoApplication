@@ -30,4 +30,11 @@
   padding: 20px;
 }
 
+.button-group{
 
+  display: inline;
+}
+.dropdown{
+
+  display: inline;
+}
