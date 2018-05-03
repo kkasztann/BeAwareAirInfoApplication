@@ -1,6 +1,6 @@
 import { AppPage } from './app.po';
 
-describe('my-interface App', () => {
+describe('login-firebase App', () => {
   let page: AppPage;
 
   beforeEach(() => {
