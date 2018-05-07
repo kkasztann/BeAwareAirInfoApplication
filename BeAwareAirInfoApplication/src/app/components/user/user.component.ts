@@ -4,6 +4,9 @@ import { User } from '../../models/User';
 import { AuthService } from '../../services/auth.service';
 
 import { SessionStorageService } from 'ngx-webstorage';
+import { HttpService } from '../../services/http.service';
+import { Stacje } from '../../models/Stacje';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-user',
@@ -38,12 +41,14 @@ export class UserComponent implements OnInit, DoCheck {
   i: number;
   userToCreate = false;
 
+  wszystkieStacje;
 
   @Input() title = 'Default title';
 
   constructor(
     private databaseService: DatabaseService,
     public authService: AuthService,
+    private httpService: HttpService,
     private sessionSt: SessionStorageService) {
     this.alergiaStan = this.getSessionStorage('alergia');
     this.astmaStan = this.getSessionStorage('astma');
@@ -55,8 +60,10 @@ export class UserComponent implements OnInit, DoCheck {
       name: 'Bezimienny',
       myID: '',
       sex: '',
-      defaultLocation: ''
+      defaultLocation: '1081'
     };
+
+    this.getStacjeObszar('48.903136', '14.196732', '54.632825', '24.030281');
   }
 
   ngDoCheck(): void {
@@ -116,6 +123,16 @@ export class UserComponent implements OnInit, DoCheck {
 
   getSessionStorage(key) {
     return this.sessionSt.retrieve(key);
+  }
+
+
+  getStacjeObszar(latSW: string, longSW: string, latNE: string, longNE: string) {
+    this.httpService.getStacjeObszar(latSW, longSW, latNE, longNE).retry(3).subscribe(stacje => {
+      console.log(stacje);
+      this.wszystkieStacje = stacje;
+    }, (error: HttpErrorResponse) => {
+      console.log(error);
+    });
   }
 
 

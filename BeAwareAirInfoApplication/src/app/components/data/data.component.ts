@@ -6,6 +6,9 @@ import { Observable } from 'rxjs/Observable';
 import { Chart } from 'chart.js';
 import { StacjePobliskie } from '../../models/StacjePobliskie';
 import { StacjaZHistoria } from '../../models/StacjaZHistoria';
+import { AuthService } from '../../services/auth.service';
+import { SessionStorageService } from 'ngx-webstorage';
+import { User } from '../../models/User';
 
 @Component({
   selector: 'app-data',
@@ -26,14 +29,36 @@ export class DataComponent implements OnInit {
   stacjaID = 129;
   stacjaPobrana;
 
+  zalogowany = false;
+  defaultLocation;
+  userIDtoShow;
+  users: User[];
+  i;
 
-  constructor(private httpService: HttpService) {
+  constructor(private httpService: HttpService, public authService: AuthService, private sessionSt: SessionStorageService) {
     this.getStacjeObszar('48.903136', '14.196732', '54.632825', '24.030281');
   }
 
   ngOnInit() {
     this.getStacjaPobliska('50.064650', '19.9449807');
     this.getStacjaID('758');
+    this.users = this.sessionSt.retrieve('users');
+    this.authService.getAuth().subscribe(auth => {
+      if (auth) {
+        this.userIDtoShow = auth.uid;
+
+        for (this.i = 0; this.i < this.users.length; this.i++) {
+          if (this.userIDtoShow === this.users[this.i].myID) {
+            this.defaultLocation = this.users[this.i].defaultLocation;
+          }
+        }
+
+        this.zalogowany = true;
+      } else { this.zalogowany = false; }
+    });
+
+
+
   }
 
   getStacjeObszar(latSW: string, longSW: string, latNE: string, longNE: string) {

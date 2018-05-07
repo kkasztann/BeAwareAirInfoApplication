@@ -3,6 +3,7 @@
     <div class="form-group card-body">
       <h2>Choose station</h2>
       <select class="custom-select" [(ngModel)]="stacjaID">
+        <option *ngIf="zalogowany" [value]="defaultLocation">Default Location</option>
         <option *ngFor="let s of wszystkieStacje" [value]="s.id">{{s.address.locality}} {{s.address.route}} {{s.address.streetNumber}} </option>
       </select>
     </div>
