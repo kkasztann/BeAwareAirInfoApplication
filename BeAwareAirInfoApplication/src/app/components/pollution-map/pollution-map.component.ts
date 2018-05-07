@@ -33,7 +33,10 @@ export class PollutionMapComponent implements OnInit {
     this.getMyPosition();
   }
   ngOnInit(): void {
-    this.getStacjeObszar('48.903136', '14.196732', '54.632825', '24.030281');
+    // Cały kraj
+     this.getStacjeObszar('48.903136', '14.196732', '54.632825', '24.030281');
+    // Małopolska +-
+    // this.getStacjeObszar('50.436440', '22.783392', '50.002493', '19.106864');
     console.log(this.wszystkieStacje);
 
   }
