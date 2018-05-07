@@ -5,23 +5,30 @@ import { LoginPageComponent } from './components/login-page/login-page.component
 import { RegisterPageComponent } from './components/register-page/register-page.component';
 import { PrivatePageComponent } from './components/private-page/private-page.component';
 import { NotFoundPageComponent } from './components/not-found-page/not-found-page.component';
+import { UserComponent } from './components/user/user.component';
+import { DataComponent } from './components/data/data.component';
 
 import { AuthGuard } from './guards/auth.guard';
+import { PollutionMapComponent } from './components/pollution-map/pollution-map.component';
+import { FaqComponent } from './components/faq/faq.component';
+import { SupportComponent } from './components/support/support.component';
+import { RateComponent } from './components/rate/rate.component';
+import { AboutUsComponent } from './components/about-us/about-us.component';
+
+
 
 const routes: Routes = [
   {path: '', component: HomePageComponent},
   {path: 'login', component: LoginPageComponent},
   {path: 'register', component: RegisterPageComponent},
   {path: 'private', component: PrivatePageComponent, canActivate: [AuthGuard]},
-  {path: 'user', component: PrivatePageComponent, canActivate: [AuthGuard]},
-  {path: 'location-current', component: NotFoundPageComponent},
-  {path: 'location-default', component: NotFoundPageComponent},
-  {path: 'location-select', component: NotFoundPageComponent},
-  {path: 'data', component: NotFoundPageComponent},
-  {path: 'faq', component: NotFoundPageComponent},
-  {path: 'support', component: NotFoundPageComponent},
-  {path: 'rate', component: NotFoundPageComponent},
-  {path: 'about-us', component: NotFoundPageComponent},
+  {path: 'user', component: UserComponent, canActivate: [AuthGuard]},
+  {path: 'pollution-map', component: PollutionMapComponent},
+  {path: 'data', component: DataComponent},
+  {path: 'faq', component: FaqComponent},
+  {path: 'support', component: SupportComponent},
+  {path: 'rate', component: RateComponent},
+  {path: 'about-us', component: AboutUsComponent},
   {path: '**', component: NotFoundPageComponent}
 ];
 

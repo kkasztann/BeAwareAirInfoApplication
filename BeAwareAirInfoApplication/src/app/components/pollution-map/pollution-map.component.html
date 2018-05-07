@@ -1,0 +1,124 @@
+<div class="row">
+    <div class="col-md-6 mx-auto mt-2 mb-3">
+      <div class="card">
+        <div class="card-body text-center">
+          <h3>Pollution level based on CAQI scale <i class="fa fa-map-signs"></i> </h3>
+        </div>
+        <div class="row text">
+          <div class="col-md-6">
+            <span style="color:white; font-size: 24px"> <i class="fa fa-square"></i></span>Level0 - undefinded<br>
+            <span style="color:lime; font-size: 24px"><i class="fa fa-square"></i></span>Level1 - very low<br>
+            <span style="color:yellow; font-size: 24px"><i class="fa fa-square"></i></span>Level2 - low<br>
+        </div>
+        <div class="col-md-6">
+          <span style="color:orange; font-size: 24px;"><i class="fa fa-square "></i></span>Level3 - medium<br>
+          <span style="color:red; font-size: 24px"><i class="fa fa-square"></i></span>Level4 - high<br>
+          <span style="color:black; font-size: 24px"><i class="fa fa-square"></i></span>Level5 - very high<br>
+      </div>
+    </div>
+</div>
+    </div>
+  </div>
+<div *ngIf='goWorkWithMap'>
+  <agm-map
+  [latitude]="myLat"
+  [longitude]="myLng"
+  [zoom]=14>
+    <agm-marker
+    [latitude]="myLat"
+    [longitude]="myLng"></agm-marker>
+
+
+    <!--LEVEL0 'unknow' -->
+    <span *ngFor="let stacja of wszystkieStacje">
+      <span *ngIf="stacja.pollutionLevel == 0">
+        <agm-circle
+        [latitude]=stacja.location.latitude
+        [longitude]=stacja.location.longitude
+        [circleDraggable]="false"
+        [editable]="false"
+        [fillColor]="lvl0"
+        [radius]="1500"
+        [fillOpacity]="0.08">
+        </agm-circle>
+      </span>
+    </span>
+
+    <!--LEVEL1 -->
+    <span *ngFor="let stacja of wszystkieStacje">
+        <span *ngIf="stacja.pollutionLevel == 1">
+          <agm-circle
+          [latitude]=stacja.location.latitude
+          [longitude]=stacja.location.longitude
+          [circleDraggable]="false"
+          [editable]="false"
+          [fillColor]="lvl1"
+          [radius]="1500"
+          [fillOpacity]="0.08">
+          </agm-circle>
+        </span>
+      </span>
+
+    <!--LEVEL2-->
+    <span *ngFor="let stacja of wszystkieStacje">
+        <span *ngIf="stacja.pollutionLevel == 2">
+          <agm-circle
+          [latitude]=stacja.location.latitude
+          [longitude]=stacja.location.longitude
+          [circleDraggable]="false"
+          [editable]="false"
+          [fillColor]="lvl2"
+          [radius]="1500"
+          [fillOpacity]="0.08">
+          </agm-circle>
+        </span>
+      </span>
+
+    <!--LEVEL3-->
+    <span *ngFor="let stacja of wszystkieStacje">
+        <span *ngIf="stacja.pollutionLevel == 3">
+          <agm-circle
+          [latitude]=stacja.location.latitude
+          [longitude]=stacja.location.longitude
+          [circleDraggable]="false"
+          [editable]="false"
+          [fillColor]="lvl3"
+          [radius]="1500"
+          [fillOpacity]="0.08">
+          </agm-circle>
+        </span>
+      </span>
+
+    <!--LEVEL4-->
+    <span *ngFor="let stacja of wszystkieStacje">
+        <span *ngIf="stacja.pollutionLevel == 4">
+          <agm-circle
+          [latitude]=stacja.location.latitude
+          [longitude]=stacja.location.longitude
+          [circleDraggable]="false"
+          [editable]="false"
+          [fillColor]="lvl4"
+          [radius]="1500"
+          [fillOpacity]="0.08">
+          </agm-circle>
+        </span>
+      </span>
+
+    <!--LEVEL5-->
+    <span *ngFor="let stacja of wszystkieStacje">
+        <span *ngIf="stacja.pollutionLevel == 5">
+          <agm-circle
+          [latitude]=stacja.location.latitude
+          [longitude]=stacja.location.longitude
+          [circleDraggable]="false"
+          [editable]="false"
+          [fillColor]="lvl5"
+          [radius]="1500"
+          [fillOpacity]="0.08">
+          </agm-circle>
+        </span>
+      </span>
+
+  <div *ngFor="let s of wszystkieStacje">
+    {{s.location.lat}}
+  </div>

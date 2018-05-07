@@ -1,13 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, DoCheck } from '@angular/core';
 import { AuthService } from '../../services/auth.service';
 import { FlashMessagesService } from 'angular2-flash-messages';
+import { SessionStorageService } from 'ngx-webstorage';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent implements OnInit, DoCheck {
+
 
   public isLogin: boolean;
   public userName: string;
@@ -16,15 +18,20 @@ export class NavbarComponent implements OnInit {
 
   constructor(
     public authService: AuthService,
-    public flashMessages: FlashMessagesService
+    public flashMessages: FlashMessagesService,
+    private sessionSt: SessionStorageService
   ) { }
+
+  ngDoCheck(): void {
+    this.userName = this.sessionSt.retrieve('name');
+  }
 
   ngOnInit() {
     this.authService.getAuth().subscribe(auth => {
       if (auth) {
         this.isLogin = true;
         this.userName = auth.displayName;
-        if (this.userName === null) { this.userName = 'Bezimienny'; }
+        if (this.userName === null) { this.userName = this.sessionSt.retrieve('name'); }
         this.userEmail = auth.email;
         this.userPhoto = auth.photoURL;
         // tslint:disable-next-line:max-line-length

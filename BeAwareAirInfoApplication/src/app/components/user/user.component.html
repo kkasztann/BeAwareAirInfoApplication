@@ -1,0 +1,71 @@
+
+<div id="userSettingsDiv" class="row" *ngFor="let user of users">
+  <div class="col-md-6 mx-auto mt-5" *ngIf="userIDtoShow===user.myID">
+    <div class="card">
+      <div class="card-body">
+        <h1 class="text-center">User Settings <i class="fa fa-user"></i></h1>
+        <form (ngSubmit)="updateUser(user)">
+          <div class="form-group">
+            <label for="myID">ID</label>
+            <input type="text" name="myID" id="myID" [(ngModel)]="userIDtoShow" placeholder="Your ID" disabled class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" [(ngModel)]="user.name" placeholder="Your name" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="sex">Sex</label>
+            <div class="form-group" >
+              <div class="custom-control custom-radio" >
+                <input type="radio" value="man" id="man" name="sex" class="custom-control-input"checked="" [(ngModel)]="user.sex">
+                <label class="custom-control-label" for="man">Man</label>
+              </div>
+              <div class="custom-control custom-radio" >
+                <input type="radio" value="woman" id="woman" name="sex" class="custom-control-input" [(ngModel)]="user.sex">
+                <label class="custom-control-label" for="woman">Woman</label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="defaultLocation">Default location</label>
+            <input type="text" name="defaultLocation" id="defaultLocation" [(ngModel)]="user.defaultLocation" placeholder="Your default location - I DONT WORK" class="form-control">
+          </div>
+          <input type="submit" value="UPDATE INFO ABOUT ME" class="btn btn-primary btn-block btn-lg">
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="row">
+  <div class="col-md-6 mx-auto mt-2">
+    <div class="card">
+      <div class="card-body text-center">
+        <h3><i class="fa fa-medkit"></i> HEALTH INFO <i class="fa fa-medkit"></i> </h3>
+      </div>
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="alergia" [(ngModel)]="alergiaStan">
+          <label class="custom-control-label" for="alergia" (click)="setSessionStorage('alergia', !getSessionStorage('alergia'))">Mam alergię na szkodliwe pyły</label>
+        </div>
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="astma" [(ngModel)]="astmaStan">
+          <label class="custom-control-label" for="astma" (click)="setSessionStorage('astma', !getSessionStorage('astma'))">Choruje na astme</label>
+        </div>
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="oskrzela" [(ngModel)]="oskrzelaStan">
+          <label class="custom-control-label" for="oskrzela" (click)="setSessionStorage('oskrzela', !getSessionStorage('oskrzela'))">Choruje na zapalenie oskrzeli</label>
+        </div>
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="pluca" [(ngModel)]="plucaStan">
+          <label class="custom-control-label" for="pluca" (click)="setSessionStorage('pluca', !getSessionStorage('pluca'))">Choruje na zapalenie płuc</label>
+        </div>
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="inne" [(ngModel)]="inneStan">
+          <label class="custom-control-label" for="inne" (click)="setSessionStorage('inne', !getSessionStorage('inne'))">Choruje na inne choroby układu oddechowego</label>
+        </div>
+      </div>
+    </div>
+  </div>
+
