@@ -580,7 +580,7 @@ var AboutUsComponent = /** @class */ (function () {
 /***/ "./src/app/components/data/data.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\r\n  <div class=\"col-md-12 mx-auto text-center card\">\r\n    <div class=\"form-group card-body\">\r\n      <h2>Choose station</h2>\r\n      <select class=\"custom-select\" [(ngModel)]=\"stacjaID\">\r\n        <option *ngFor=\"let s of wszystkieStacje\" [value]=\"s.id\">{{s.address.locality}} {{s.address.route}} {{s.address.streetNumber}} </option>\r\n      </select>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n<div>\r\n  <button style=\"margin: 0 auto; display: flex;\" (click)=\"getStacjaID(stacjaID)\" (click)=\"getCharts()\">Show charts for station with ID: {{stacjaID}}</button>\r\n</div>\r\n<div class=\"row\">\r\n  <div class=\"col-md-6 mx-auto mt-2\">\r\n    <div class=\"card\">\r\n      <div class=\"card-body\">\r\n        <div *ngIf=\"chart1\">\r\n          <canvas id=\"chart1\">{{ chart1 }}</canvas>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"col-md-6 mx-auto mt-2\">\r\n    <div class=\"card\">\r\n      <div class=\"card-body\">\r\n        <div *ngIf=\"chart2\">\r\n          <canvas id=\"chart2\">{{ chart2 }}</canvas>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-md-6 mx-auto mt-2\">\r\n    <div class=\"card\">\r\n      <div class=\"card-body\">\r\n        <div *ngIf=\"chart3\">\r\n          <canvas id=\"chart3\">{{ chart3 }}</canvas>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"col-md-6 mx-auto mt-2\">\r\n    <div class=\"card\">\r\n      <div class=\"card-body\">\r\n        <div *ngIf=\"chart4\">\r\n          <canvas id=\"chart4\">{{ chart4 }}</canvas>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n<br>\r\n<br>\r\n"
+module.exports = "<div class=\"row\">\r\n  <div class=\"col-md-12 mx-auto text-center card\">\r\n    <div class=\"form-group card-body\">\r\n      <h2>Choose station</h2>\r\n      <select class=\"custom-select\" [(ngModel)]=\"stacjaID\">\r\n        <option *ngIf=\"zalogowany\" [value]=\"defaultLocation\">Default Location</option>\r\n        <option *ngFor=\"let s of wszystkieStacje\" [value]=\"s.id\">{{s.address.locality}} {{s.address.route}} {{s.address.streetNumber}} </option>\r\n      </select>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n<div>\r\n  <button style=\"margin: 0 auto; display: flex;\" (click)=\"getStacjaID(stacjaID)\" (click)=\"getCharts()\">Show charts for station with ID: {{stacjaID}}</button>\r\n</div>\r\n<div class=\"row\">\r\n  <div class=\"col-md-6 mx-auto mt-2\">\r\n    <div class=\"card\">\r\n      <div class=\"card-body\">\r\n        <div *ngIf=\"chart1\">\r\n          <canvas id=\"chart1\">{{ chart1 }}</canvas>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"col-md-6 mx-auto mt-2\">\r\n    <div class=\"card\">\r\n      <div class=\"card-body\">\r\n        <div *ngIf=\"chart2\">\r\n          <canvas id=\"chart2\">{{ chart2 }}</canvas>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-md-6 mx-auto mt-2\">\r\n    <div class=\"card\">\r\n      <div class=\"card-body\">\r\n        <div *ngIf=\"chart3\">\r\n          <canvas id=\"chart3\">{{ chart3 }}</canvas>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"col-md-6 mx-auto mt-2\">\r\n    <div class=\"card\">\r\n      <div class=\"card-body\">\r\n        <div *ngIf=\"chart4\">\r\n          <canvas id=\"chart4\">{{ chart4 }}</canvas>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n<br>\r\n<br>\r\n"
 
 /***/ }),
 
@@ -601,6 +601,8 @@ module.exports = ""
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_retry__ = __webpack_require__("./node_modules/rxjs/_esm5/add/operator/retry.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_chart_js__ = __webpack_require__("./node_modules/chart.js/src/chart.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_chart_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_chart_js__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_auth_service__ = __webpack_require__("./src/app/services/auth.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ngx_webstorage__ = __webpack_require__("./node_modules/ngx-webstorage/dist/app.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -614,19 +616,40 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
 var DataComponent = /** @class */ (function () {
-    function DataComponent(httpService) {
+    function DataComponent(httpService, authService, sessionSt) {
         this.httpService = httpService;
+        this.authService = authService;
+        this.sessionSt = sessionSt;
         this.chart1 = [];
         this.chart2 = [];
         this.chart3 = [];
         this.chart4 = [];
         this.stacjaID = 129;
+        this.zalogowany = false;
         this.getStacjeObszar('48.903136', '14.196732', '54.632825', '24.030281');
     }
     DataComponent.prototype.ngOnInit = function () {
+        var _this = this;
         this.getStacjaPobliska('50.064650', '19.9449807');
         this.getStacjaID('758');
+        this.users = this.sessionSt.retrieve('users');
+        this.authService.getAuth().subscribe(function (auth) {
+            if (auth) {
+                _this.userIDtoShow = auth.uid;
+                for (_this.i = 0; _this.i < _this.users.length; _this.i++) {
+                    if (_this.userIDtoShow === _this.users[_this.i].myID) {
+                        _this.defaultLocation = _this.users[_this.i].defaultLocation;
+                    }
+                }
+                _this.zalogowany = true;
+            }
+            else {
+                _this.zalogowany = false;
+            }
+        });
     };
     DataComponent.prototype.getStacjeObszar = function (latSW, longSW, latNE, longNE) {
         var _this = this;
@@ -772,7 +795,7 @@ var DataComponent = /** @class */ (function () {
             template: __webpack_require__("./src/app/components/data/data.component.html"),
             styles: [__webpack_require__("./src/app/components/data/data.component.scss")]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_http_service__["a" /* HttpService */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_http_service__["a" /* HttpService */], __WEBPACK_IMPORTED_MODULE_4__services_auth_service__["a" /* AuthService */], __WEBPACK_IMPORTED_MODULE_5_ngx_webstorage__["b" /* SessionStorageService */]])
     ], DataComponent);
     return DataComponent;
 }());
@@ -1207,7 +1230,10 @@ var PollutionMapComponent = /** @class */ (function () {
         this.getMyPosition();
     }
     PollutionMapComponent.prototype.ngOnInit = function () {
+        // Cały kraj
         this.getStacjeObszar('48.903136', '14.196732', '54.632825', '24.030281');
+        // Małopolska +-
+        // this.getStacjeObszar('50.436440', '22.783392', '50.002493', '19.106864');
         console.log(this.wszystkieStacje);
     };
     PollutionMapComponent.prototype.getStacjeObszar = function (latSW, longSW, latNE, longNE) {
@@ -1471,7 +1497,7 @@ var SupportComponent = /** @class */ (function () {
 /***/ "./src/app/components/user/user.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\r\n<div id=\"userSettingsDiv\" class=\"row\" *ngFor=\"let user of users\">\r\n  <div class=\"col-md-6 mx-auto mt-5\" *ngIf=\"userIDtoShow===user.myID\">\r\n    <div class=\"card\">\r\n      <div class=\"card-body\">\r\n        <h1 class=\"text-center\">User Settings <i class=\"fa fa-user\"></i></h1>\r\n        <form (ngSubmit)=\"updateUser(user)\">\r\n          <div class=\"form-group\">\r\n            <label for=\"myID\">ID</label>\r\n            <input type=\"text\" name=\"myID\" id=\"myID\" [(ngModel)]=\"userIDtoShow\" placeholder=\"Your ID\" disabled class=\"form-control\">\r\n          </div>\r\n          <div class=\"form-group\">\r\n            <label for=\"name\">Nickname</label>\r\n            <input type=\"text\" name=\"name\" id=\"name\" [(ngModel)]=\"user.name\" placeholder=\"Your nickname\" class=\"form-control\">\r\n          </div>\r\n          <div class=\"form-group\">\r\n            <label for=\"sex\">Sex</label>\r\n            <div class=\"form-group\" >\r\n              <div class=\"custom-control custom-radio\" >\r\n                <input type=\"radio\" value=\"man\" id=\"man\" name=\"sex\" class=\"custom-control-input\"checked=\"\" [(ngModel)]=\"user.sex\">\r\n                <label class=\"custom-control-label\" for=\"man\">Man</label>\r\n              </div>\r\n              <div class=\"custom-control custom-radio\" >\r\n                <input type=\"radio\" value=\"woman\" id=\"woman\" name=\"sex\" class=\"custom-control-input\" [(ngModel)]=\"user.sex\">\r\n                <label class=\"custom-control-label\" for=\"woman\">Woman</label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <div class=\"form-group\">\r\n            <label for=\"defaultLocation\">Default location</label>\r\n            <input type=\"text\" name=\"defaultLocation\" id=\"defaultLocation\" [(ngModel)]=\"user.defaultLocation\" placeholder=\"Your default location - I DONT WORK\" class=\"form-control\">\r\n          </div>\r\n          <input type=\"submit\" value=\"UPDATE INFO ABOUT ME\" class=\"btn btn-primary btn-block btn-lg\">\r\n        </form>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-md-6 mx-auto mt-2\">\r\n    <div class=\"card\">\r\n      <div class=\"card-body text-center\">\r\n        <h3><i class=\"fa fa-medkit\"></i> HEALTH INFO <i class=\"fa fa-medkit\"></i> </h3>\r\n      </div>\r\n        <div class=\"custom-control custom-checkbox\">\r\n          <input type=\"checkbox\" class=\"custom-control-input\" id=\"alergia\" [(ngModel)]=\"alergiaStan\">\r\n          <label class=\"custom-control-label\" for=\"alergia\" (click)=\"setSessionStorage('alergia', !getSessionStorage('alergia'))\">Mam alergię na szkodliwe pyły</label>\r\n        </div>\r\n        <div class=\"custom-control custom-checkbox\">\r\n          <input type=\"checkbox\" class=\"custom-control-input\" id=\"astma\" [(ngModel)]=\"astmaStan\">\r\n          <label class=\"custom-control-label\" for=\"astma\" (click)=\"setSessionStorage('astma', !getSessionStorage('astma'))\">Choruje na astme</label>\r\n        </div>\r\n        <div class=\"custom-control custom-checkbox\">\r\n          <input type=\"checkbox\" class=\"custom-control-input\" id=\"oskrzela\" [(ngModel)]=\"oskrzelaStan\">\r\n          <label class=\"custom-control-label\" for=\"oskrzela\" (click)=\"setSessionStorage('oskrzela', !getSessionStorage('oskrzela'))\">Choruje na zapalenie oskrzeli</label>\r\n        </div>\r\n        <div class=\"custom-control custom-checkbox\">\r\n          <input type=\"checkbox\" class=\"custom-control-input\" id=\"pluca\" [(ngModel)]=\"plucaStan\">\r\n          <label class=\"custom-control-label\" for=\"pluca\" (click)=\"setSessionStorage('pluca', !getSessionStorage('pluca'))\">Choruje na zapalenie płuc</label>\r\n        </div>\r\n        <div class=\"custom-control custom-checkbox\">\r\n          <input type=\"checkbox\" class=\"custom-control-input\" id=\"inne\" [(ngModel)]=\"inneStan\">\r\n          <label class=\"custom-control-label\" for=\"inne\" (click)=\"setSessionStorage('inne', !getSessionStorage('inne'))\">Choruje na inne choroby układu oddechowego</label>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n"
+module.exports = "<div id=\"userSettingsDiv\" class=\"row\" *ngFor=\"let user of users\">\r\n  <div class=\"col-md-6 mx-auto mt-5\" *ngIf=\"userIDtoShow===user.myID\">\r\n    <div class=\"card\">\r\n      <div class=\"card-body\">\r\n        <h1 class=\"text-center\">User Settings\r\n          <i class=\"fa fa-user\"></i>\r\n        </h1>\r\n        <form (ngSubmit)=\"updateUser(user)\">\r\n          <div class=\"form-group\">\r\n            <label for=\"myID\">ID</label>\r\n            <input type=\"text\" name=\"myID\" id=\"myID\" [(ngModel)]=\"userIDtoShow\" placeholder=\"Your ID\" disabled class=\"form-control\">\r\n          </div>\r\n          <div class=\"form-group\">\r\n            <label for=\"name\">Nickname</label>\r\n            <input type=\"text\" name=\"name\" id=\"name\" [(ngModel)]=\"user.name\" placeholder=\"Your nickname\" class=\"form-control\">\r\n          </div>\r\n          <div class=\"form-group\">\r\n            <label for=\"sex\">Sex</label>\r\n            <div class=\"form-group\">\r\n              <div class=\"custom-control custom-radio\">\r\n                <input type=\"radio\" value=\"man\" id=\"man\" name=\"sex\" class=\"custom-control-input\" checked=\"\" [(ngModel)]=\"user.sex\">\r\n                <label class=\"custom-control-label\" for=\"man\">Man</label>\r\n              </div>\r\n              <div class=\"custom-control custom-radio\">\r\n                <input type=\"radio\" value=\"woman\" id=\"woman\" name=\"sex\" class=\"custom-control-input\" [(ngModel)]=\"user.sex\">\r\n                <label class=\"custom-control-label\" for=\"woman\">Woman</label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <div class=\"form-group\">\r\n            <select class=\"custom-select\" id=\"defaultLocation\" name=\"defaultStacja\" [(ngModel)]=\"user.defaultLocation\">\r\n              <option *ngFor=\"let s of wszystkieStacje\" [value]=\"s.id\">{{s.address.locality}} {{s.address.route}} {{s.address.streetNumber}} </option>\r\n            </select>\r\n          </div>\r\n          <input type=\"submit\" value=\"UPDATE INFO ABOUT ME\" class=\"btn btn-primary btn-block btn-lg\">\r\n        </form>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-md-6 mx-auto mt-2\">\r\n    <div class=\"card\">\r\n      <div class=\"card-body text-center\">\r\n        <h3>\r\n          <i class=\"fa fa-medkit\"></i> HEALTH INFO\r\n          <i class=\"fa fa-medkit\"></i>\r\n        </h3>\r\n      </div>\r\n      <div class=\"custom-control custom-checkbox\">\r\n        <input type=\"checkbox\" class=\"custom-control-input\" id=\"alergia\" [(ngModel)]=\"alergiaStan\">\r\n        <label class=\"custom-control-label\" for=\"alergia\" (click)=\"setSessionStorage('alergia', !getSessionStorage('alergia'))\">Mam alergię na szkodliwe pyły</label>\r\n      </div>\r\n      <div class=\"custom-control custom-checkbox\">\r\n        <input type=\"checkbox\" class=\"custom-control-input\" id=\"astma\" [(ngModel)]=\"astmaStan\">\r\n        <label class=\"custom-control-label\" for=\"astma\" (click)=\"setSessionStorage('astma', !getSessionStorage('astma'))\">Choruje na astme</label>\r\n      </div>\r\n      <div class=\"custom-control custom-checkbox\">\r\n        <input type=\"checkbox\" class=\"custom-control-input\" id=\"oskrzela\" [(ngModel)]=\"oskrzelaStan\">\r\n        <label class=\"custom-control-label\" for=\"oskrzela\" (click)=\"setSessionStorage('oskrzela', !getSessionStorage('oskrzela'))\">Choruje na zapalenie oskrzeli</label>\r\n      </div>\r\n      <div class=\"custom-control custom-checkbox\">\r\n        <input type=\"checkbox\" class=\"custom-control-input\" id=\"pluca\" [(ngModel)]=\"plucaStan\">\r\n        <label class=\"custom-control-label\" for=\"pluca\" (click)=\"setSessionStorage('pluca', !getSessionStorage('pluca'))\">Choruje na zapalenie płuc</label>\r\n      </div>\r\n      <div class=\"custom-control custom-checkbox\">\r\n        <input type=\"checkbox\" class=\"custom-control-input\" id=\"inne\" [(ngModel)]=\"inneStan\">\r\n        <label class=\"custom-control-label\" for=\"inne\" (click)=\"setSessionStorage('inne', !getSessionStorage('inne'))\">Choruje na inne choroby układu oddechowego</label>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -1491,6 +1517,7 @@ module.exports = ""
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_database_service__ = __webpack_require__("./src/app/services/database.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_auth_service__ = __webpack_require__("./src/app/services/auth.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ngx_webstorage__ = __webpack_require__("./node_modules/ngx-webstorage/dist/app.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_http_service__ = __webpack_require__("./src/app/services/http.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1504,10 +1531,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var UserComponent = /** @class */ (function () {
-    function UserComponent(databaseService, authService, sessionSt) {
+    function UserComponent(databaseService, authService, httpService, sessionSt) {
         this.databaseService = databaseService;
         this.authService = authService;
+        this.httpService = httpService;
         this.sessionSt = sessionSt;
         this.editState = false;
         // healthInfo
@@ -1527,8 +1556,9 @@ var UserComponent = /** @class */ (function () {
             name: 'Bezimienny',
             myID: '',
             sex: '',
-            defaultLocation: ''
+            defaultLocation: '1081'
         };
+        this.getStacjeObszar('48.903136', '14.196732', '54.632825', '24.030281');
     }
     UserComponent.prototype.ngDoCheck = function () {
         this.users = this.getSessionStorage('users');
@@ -1576,6 +1606,15 @@ var UserComponent = /** @class */ (function () {
     UserComponent.prototype.getSessionStorage = function (key) {
         return this.sessionSt.retrieve(key);
     };
+    UserComponent.prototype.getStacjeObszar = function (latSW, longSW, latNE, longNE) {
+        var _this = this;
+        this.httpService.getStacjeObszar(latSW, longSW, latNE, longNE).retry(3).subscribe(function (stacje) {
+            console.log(stacje);
+            _this.wszystkieStacje = stacje;
+        }, function (error) {
+            console.log(error);
+        });
+    };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
         __metadata("design:type", Object)
@@ -1588,6 +1627,7 @@ var UserComponent = /** @class */ (function () {
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_database_service__["a" /* DatabaseService */],
             __WEBPACK_IMPORTED_MODULE_2__services_auth_service__["a" /* AuthService */],
+            __WEBPACK_IMPORTED_MODULE_4__services_http_service__["a" /* HttpService */],
             __WEBPACK_IMPORTED_MODULE_3_ngx_webstorage__["b" /* SessionStorageService */]])
     ], UserComponent);
     return UserComponent;
