@@ -36,6 +36,8 @@ import { RateComponent } from './components/rate/rate.component';
 import { SupportComponent } from './components/support/support.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -65,6 +67,8 @@ import { AboutUsComponent } from './components/about-us/about-us.component';
     AngularFirestoreModule,
     FlashMessagesModule,
     HttpClientModule,
+
+    NgbModule.forRoot(),
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyAKI-T37eiih6T2TuOuuh_GS5lzHMCYxeU'
     })
