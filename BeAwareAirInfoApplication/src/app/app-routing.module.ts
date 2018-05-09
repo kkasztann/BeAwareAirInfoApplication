@@ -12,7 +12,6 @@ import { AuthGuard } from './guards/auth.guard';
 import { PollutionMapComponent } from './components/pollution-map/pollution-map.component';
 import { FaqComponent } from './components/faq/faq.component';
 import { SupportComponent } from './components/support/support.component';
-import { RateComponent } from './components/rate/rate.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 
 
@@ -27,7 +26,6 @@ const routes: Routes = [
   {path: 'data', component: DataComponent},
   {path: 'faq', component: FaqComponent},
   {path: 'support', component: SupportComponent},
-  {path: 'rate', component: RateComponent},
   {path: 'about-us', component: AboutUsComponent},
   {path: '**', component: NotFoundPageComponent}
 ];

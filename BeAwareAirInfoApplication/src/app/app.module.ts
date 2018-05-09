@@ -32,7 +32,6 @@ import { PollutionMapComponent } from './components/pollution-map/pollution-map.
 
 import {Ng2Webstorage} from 'ngx-webstorage';
 import { FaqComponent } from './components/faq/faq.component';
-import { RateComponent } from './components/rate/rate.component';
 import { SupportComponent } from './components/support/support.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 
@@ -52,7 +51,6 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     DataComponent,
     PollutionMapComponent,
     FaqComponent,
-    RateComponent,
     SupportComponent,
     AboutUsComponent
   ],
