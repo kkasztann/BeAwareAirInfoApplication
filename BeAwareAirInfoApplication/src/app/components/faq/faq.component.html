@@ -1,95 +1,97 @@
-
 <div class="jumbotron mt-3">
   <h2 class="display-6">FAQ - Przed kontaktem sprawdź listę często zadawanych pytań</h2>
-<br>
-<p>
-  <button type="button" class="btn btn-outline-primary" (click)="isCollapsed = !isCollapsed"
-          [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample">
-    Czy korzystanie z aplikacji jest całkowicie darmowe?
-  </button>
-</p>
-<div id="collapseExample" [ngbCollapse]="isCollapsed">
-  <div class="card">
-    <div class="card-body">
-      Korzystanie z aplikacji jest i będzie darmowe, BeAware została stworzona z misją zwrocenia uwagi na problem z jakoscią powietrza w Polsce, oraz z nadzieją na jej poprawę.
+  <br>
+  <p>
+    <button type="button" class="btn btn-outline-primary" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed"
+      aria-controls="collapseExample">
+      Czy korzystanie z aplikacji jest całkowicie darmowe?
+    </button>
+  </p>
+  <div id="collapseExample" [ngbCollapse]="isCollapsed">
+    <div class="card">
+      <div class="card-body">
+        Korzystanie z aplikacji jest i będzie darmowe, BeAware została stworzona z misją zwrocenia uwagi na problem z jakoscią powietrza
+        w Polsce, oraz z nadzieją na jej poprawę.
+      </div>
     </div>
   </div>
-</div>
 
 
-<p>
-  <button type="button" class="btn btn-outline-primary" (click)="isCollapsed2 = !isCollapsed2"
-          [attr.aria-expanded]="!isCollapsed2" aria-controls="collapseExample">
-    Czy strona/aplikacja zbiera informacje o użytkownikach?
-  </button>
-</p>
-<div id="collapseExample" [ngbCollapse]="isCollapsed2">
-  <div class="card">
-    <div class="card-body">
-      Strona zbiera i przechowuje tylko te informacje, ktore uzytkownik sam postanowi wprowadzic, a ktore służą jedynie zwiekszenia precyzyjnosci dostarczanych przez BeAware danych.
+  <p>
+    <button type="button" class="btn btn-outline-primary" (click)="isCollapsed2 = !isCollapsed2" [attr.aria-expanded]="!isCollapsed2"
+      aria-controls="collapseExample">
+      Czy strona/aplikacja zbiera informacje o użytkownikach?
+    </button>
+  </p>
+  <div id="collapseExample" [ngbCollapse]="isCollapsed2">
+    <div class="card">
+      <div class="card-body">
+        Strona zbiera i przechowuje tylko te informacje, ktore uzytkownik sam postanowi wprowadzic, a ktore służą jedynie zwiekszenia
+        precyzyjnosci dostarczanych przez BeAware danych.
+      </div>
     </div>
   </div>
-</div>
 
 
-<p>
-  <button type="button" class="btn btn-outline-primary" (click)="isCollapsed3 = !isCollapsed3"
-          [attr.aria-expanded]="!isCollapsed3" aria-controls="collapseExample">
-    Czy aplikacja rozpowszechnia informacje o użytkownikach podmiotom trzecim?
-  </button>
-</p>
-<div id="collapseExample" [ngbCollapse]="isCollapsed3">
-  <div class="card">
-    <div class="card-body">
-      Tak jak wyżej, informacje wprowdzane przez użytkownikow slużą tworcom jedynie poprawie jakosci dostarczanych danych i nie są w żaden sposob rozpowszechniane czy wykorzystywane.
+  <p>
+    <button type="button" class="btn btn-outline-primary" (click)="isCollapsed3 = !isCollapsed3" [attr.aria-expanded]="!isCollapsed3"
+      aria-controls="collapseExample">
+      Czy aplikacja rozpowszechnia informacje o użytkownikach podmiotom trzecim?
+    </button>
+  </p>
+  <div id="collapseExample" [ngbCollapse]="isCollapsed3">
+    <div class="card">
+      <div class="card-body">
+        Tak jak wyżej, informacje wprowdzane przez użytkownikow slużą tworcom jedynie poprawie jakosci dostarczanych danych i nie
+        są w żaden sposob rozpowszechniane czy wykorzystywane.
+      </div>
     </div>
   </div>
-</div>
 
 
-<p>
-  <button type="button" class="btn btn-outline-primary" (click)="isCollapsed4 = !isCollapsed4"
-          [attr.aria-expanded]="!isCollapsed4" aria-controls="collapseExample">
-   Czy mogę zmienić raz wprowadzone dane użytkownia?
-  </button>
-</p>
-<div id="collapseExample" [ngbCollapse]="isCollapsed4">
-  <div class="card">
-    <div class="card-body">
-      Użytkownik ma w dowolnym momencie możliwosc zmiany informacji na temat swojego stanu zdrowia jak i rowniez na temat domyslnej lokalizacji, w zakladce User Settings.
+  <p>
+    <button type="button" class="btn btn-outline-primary" (click)="isCollapsed4 = !isCollapsed4" [attr.aria-expanded]="!isCollapsed4"
+      aria-controls="collapseExample">
+      Czy mogę zmienić raz wprowadzone dane użytkownia?
+    </button>
+  </p>
+  <div id="collapseExample" [ngbCollapse]="isCollapsed4">
+    <div class="card">
+      <div class="card-body">
+        Użytkownik ma w dowolnym momencie możliwosc zmiany informacji na temat swojego stanu zdrowia jak i rowniez na temat domyslnej
+        lokalizacji, w zakladce User Settings.
+      </div>
     </div>
   </div>
-</div>
 
-<p>
-  <button type="button" class="btn btn-outline-primary" (click)="isCollapsed5 = !isCollapsed5"
-          [attr.aria-expanded]="!isCollapsed5" aria-controls="collapseExample">
-   Dlaczego nie są dostarczane dane na temat wszystkich miast w Polsce?
-  </button>
-</p>
-<div id="collapseExample" [ngbCollapse]="isCollapsed5">
-  <div class="card">
-    <div class="card-body">
-     Dane o stanie o jakosci powietrza pobierane sa za pomoca specjalnych czujnikow. Tak wiec tworcy dysponuja danymi jedynie z miejsc gdzie takie czujniki sie znajduja, ich liczba jednak stale wzrasta.
+  <p>
+    <button type="button" class="btn btn-outline-primary" (click)="isCollapsed5 = !isCollapsed5" [attr.aria-expanded]="!isCollapsed5"
+      aria-controls="collapseExample">
+      Dlaczego nie są dostarczane dane na temat wszystkich miast w Polsce?
+    </button>
+  </p>
+  <div id="collapseExample" [ngbCollapse]="isCollapsed5">
+    <div class="card">
+      <div class="card-body">
+        Dane o stanie o jakosci powietrza pobierane sa za pomoca specjalnych czujnikow. Tak wiec tworcy dysponuja danymi jedynie
+        z miejsc gdzie takie czujniki sie znajduja, ich liczba jednak stale wzrasta.
+      </div>
     </div>
   </div>
-</div>
 
-<p>
-  <button type="button" class="btn btn-outline-primary" (click)="isCollapsed6 = !isCollapsed6"
-          [attr.aria-expanded]="!isCollapsed6" aria-controls="collapseExample">
-    Jak często aktualizowane są dane?
-  </button>
-</p>
-<div id="collapseExample" [ngbCollapse]="isCollapsed6">
-  <div class="card">
-    <div class="card-body">
-    Dane dostarczane przez aplikację aktualizowane są co godzine.
+  <p>
+    <button type="button" class="btn btn-outline-primary" (click)="isCollapsed6 = !isCollapsed6" [attr.aria-expanded]="!isCollapsed6"
+      aria-controls="collapseExample">
+      Jak często aktualizowane są dane?
+    </button>
+  </p>
+  <div id="collapseExample" [ngbCollapse]="isCollapsed6">
+    <div class="card">
+      <div class="card-body">
+        Dane dostarczane przez aplikację aktualizowane są co godzine.
+      </div>
     </div>
   </div>
-</div>
 
 
 </div>
-
-
