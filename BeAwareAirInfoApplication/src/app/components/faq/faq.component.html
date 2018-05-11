@@ -93,5 +93,19 @@
     </div>
   </div>
 
+  <p>
+    <button type="button" class="btn btn-outline-primary" (click)="isCollapsed7 = !isCollapsed7" [attr.aria-expanded]="!isCollapsed7"
+      aria-controls="collapseExample">
+      Czy udostępniony jest do wglądu kod źrodłowy projektu?
+    </button>
+  </p>
+  <div id="collapseExample" [ngbCollapse]="isCollapsed7">
+    <div class="card">
+      <div class="card-body">
+        Odnosnik do kodu źrodłowego znajduje się w zakładce SUPPORT
+      </div>
+    </div>
+  </div>
+
 
 </div>

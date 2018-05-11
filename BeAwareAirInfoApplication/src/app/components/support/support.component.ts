@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SupportComponent implements OnInit {
 
+ public isCollapsedMail1 = true;
+ public isCollapsedMail2 = true;
+
   constructor() { }
 
   ngOnInit() {

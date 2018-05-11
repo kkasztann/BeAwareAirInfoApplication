@@ -1,33 +1,53 @@
-<div class="jumbotron mt-2">
+<div class="jumbotron mt-3">
   <div class="support-info">
     Jeżeli masz jakies pytania prosimy zajrzyj wczesniej do zakladki FAQ. Jeżeli nie znajdziesz tam odpowiedzi na swoje pytanie
-    lub chcesz pomoc w rozwoju aplikacji prosimy o kontakt na:
+    lub chcesz pomoc w rozwoju aplikacji prosimy o kontakt na maila:
     <br>
-    <br> TELEFON:
-    <br> 123123123
-    <br>
-    <br> LUB E-MAIL:
-
-    <br> JAKISPRZYKLADOWYMAIL@GMAIL.COM
-
-    <br>
-    <br> Mozesz rowniez wesprzec rozwoj aplikacji poprzez dotacje na nszym koncie patronite:
-
     <br>
 
+    <p>
+      <button type="button" class="btn btn-outline-primary" (click)="isCollapsedMail1 = !isCollapsedMail1; " [attr.aria-expanded]="!isCollapsedMail1"
+        aria-controls="collapseExample">
+        Mateusz Otręba
+      </button>
+
+      <button type="button" class="btn btn-outline-primary" (click)="isCollapsedMail2 = !isCollapsedMail2" [attr.aria-expanded]="!isCollapsedMail2"
+        aria-controls="collapseExample">
+        Daniel Słowik
+      </button>
+
+    </p>
 
 
-    
+    <div id="collapseExample" [ngbCollapse]="isCollapsedMail1">
+      <div class="card">
+        <div class="card-body">
+          motreba1996@gmail.com
+        </div>
+      </div>
+    </div>
+
+    <div id="collapseExample" [ngbCollapse]="isCollapsedMail2">
+      <div class="card">
+        <div class="card-body">
+          kkasztann@gmail.com
+        </div>
+      </div>
+    </div>
+
+    <br>
+    <br> Jeżeli natomiast interesują Cię szczegoły naszego projektu, to kod źrodłowy jest dostępny dla wszystkich pod adresem:
+
+    <br>
+    <br>
+
     <p class="lead">
-        <a class="btn btn-outline-primary btn-lg" href="https://github.com/kkasztann/BeAwareAirInfoApplication" role="button">Check on GitHub</a>
-      </p>
-
-
-
+      <a class="btn btn-outline-primary btn-lg" href="https://github.com/kkasztann/BeAwareAirInfoApplication" role="button">Check on GitHub</a>
+    </p>
 
     <br>
-    <br> Jeżeli chcesz wesprzeć BeAware w inny sposob, możesz rowniez opowiedzieć
-    o nas znajomym. Im nas więcej, tym więcej dobrego dla powietrza w Polsce możemy zrobić.
+    <br> Jeżeli chcesz wesprzeć BeAware w inny sposob, możesz rowniez opowiedzieć o nas znajomym. Im nas więcej, tym więcej dobrego
+    dla powietrza w Polsce możemy zrobić.
     <br> Za każdą formę udzielonego nam wsparcia serdecznie dziękujemy.
 
   </div>
