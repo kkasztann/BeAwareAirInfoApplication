@@ -10,7 +10,7 @@ export class FaqComponent implements OnInit, DoCheck {
 
   screenWidth: Number;
 
-  public isCollapsed =  true;
+  public isCollapsed = true;
   public isCollapsed2 = true;
   public isCollapsed3 = true;
   public isCollapsed4 = true;
@@ -25,8 +25,7 @@ export class FaqComponent implements OnInit, DoCheck {
   @HostListener('window:resize', ['$event'])
   onResize(event?) {
     this.screenWidth = window.innerWidth;
-    console.log(this.screenWidth);
-}
+  }
 
   ngOnInit() {
   }

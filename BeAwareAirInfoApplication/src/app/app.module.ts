@@ -15,26 +15,21 @@ import { FlashMessagesService } from 'angular2-flash-messages';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
-
 import { environment } from '../environments/environment.prod';
-
 import { AuthService } from './services/auth.service';
 import { AuthGuard } from './guards/auth.guard';
 import { FooterComponent } from './components/footer/footer.component';
 import { UserComponent } from './components/user/user.component';
-
 import { DatabaseService } from './services/database.service';
 import { DataComponent } from './components/data/data.component';
 import { HttpService } from './services/http.service';
 import { HttpClientModule } from '@angular/common/http';
 import { PollutionMapComponent } from './components/pollution-map/pollution-map.component';
-
-import {Ng2Webstorage} from 'ngx-webstorage';
+import { Ng2Webstorage } from 'ngx-webstorage';
 import { FaqComponent } from './components/faq/faq.component';
 import { SupportComponent } from './components/support/support.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
-
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [

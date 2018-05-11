@@ -46,19 +46,14 @@ export class DataComponent implements OnInit {
     this.authService.getAuth().subscribe(auth => {
       if (auth) {
         this.userIDtoShow = auth.uid;
-
         for (this.i = 0; this.i < this.users.length; this.i++) {
           if (this.userIDtoShow === this.users[this.i].myID) {
             this.defaultLocation = this.users[this.i].defaultLocation;
           }
         }
-
         this.zalogowany = true;
       } else { this.zalogowany = false; }
     });
-
-
-
   }
 
   getStacjeObszar(latSW: string, longSW: string, latNE: string, longNE: string) {
@@ -73,7 +68,6 @@ export class DataComponent implements OnInit {
   getStacjaPobliska(lat: string, long: string) {
     this.httpService.getStacjaPobliska(lat, long).retry(3).subscribe(stacja => {
       this.stacjaPobrana = stacja;
-      //  console.log(this.pobliskaStacja);
     }, (error: HttpErrorResponse) => {
       console.log(error);
     });
@@ -88,7 +82,6 @@ export class DataComponent implements OnInit {
       console.log(error);
     }
     );
-
   }
 
 
@@ -162,7 +155,6 @@ export class DataComponent implements OnInit {
         labels: ['air Quality', 'pm10', 'pm25'],
         datasets: [
           {
-
             backgroundColor: ['#3e95cd', '#8e5ea2', '#3cba9f'],
             data: [
               this.stacjaPobrana.history[11].measurements.airQualityIndex,
@@ -190,7 +182,6 @@ export class DataComponent implements OnInit {
         labels: ['air Quality', 'pm10', 'pm25'],
         datasets: [
           {
-
             backgroundColor: ['#3e95cd', '#8e5ea2', '#3cba9f'],
             data: [
               this.stacjaPobrana.history[23].measurements.airQualityIndex,
@@ -209,15 +200,7 @@ export class DataComponent implements OnInit {
       }
     });
   }
-
-
-
-
 }
-
-
-
-
 
 export interface Post {
   userId?: number;

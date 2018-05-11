@@ -30,7 +30,7 @@ export class RegisterPageComponent implements OnInit {
         this.router.navigate(['/user']);
       }).catch((err) => {
         this.flashMessages.show(err.message,
-        { cssClass: 'alert-danger', timeout: 4000 });
+          { cssClass: 'alert-danger', timeout: 4000 });
       });
   }
 

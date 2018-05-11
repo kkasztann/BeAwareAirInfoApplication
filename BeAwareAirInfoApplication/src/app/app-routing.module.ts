@@ -6,26 +6,23 @@ import { RegisterPageComponent } from './components/register-page/register-page.
 import { NotFoundPageComponent } from './components/not-found-page/not-found-page.component';
 import { UserComponent } from './components/user/user.component';
 import { DataComponent } from './components/data/data.component';
-
 import { AuthGuard } from './guards/auth.guard';
 import { PollutionMapComponent } from './components/pollution-map/pollution-map.component';
 import { FaqComponent } from './components/faq/faq.component';
 import { SupportComponent } from './components/support/support.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 
-
-
 const routes: Routes = [
-  {path: '', component: HomePageComponent},
-  {path: 'login', component: LoginPageComponent},
-  {path: 'register', component: RegisterPageComponent},
-  {path: 'user', component: UserComponent, canActivate: [AuthGuard]},
-  {path: 'pollution-map', component: PollutionMapComponent},
-  {path: 'data', component: DataComponent},
-  {path: 'faq', component: FaqComponent},
-  {path: 'support', component: SupportComponent},
-  {path: 'about-us', component: AboutUsComponent},
-  {path: '**', component: NotFoundPageComponent}
+  { path: '', component: HomePageComponent },
+  { path: 'login', component: LoginPageComponent },
+  { path: 'register', component: RegisterPageComponent },
+  { path: 'user', component: UserComponent, canActivate: [AuthGuard] },
+  { path: 'pollution-map', component: PollutionMapComponent },
+  { path: 'data', component: DataComponent },
+  { path: 'faq', component: FaqComponent },
+  { path: 'support', component: SupportComponent },
+  { path: 'about-us', component: AboutUsComponent },
+  { path: '**', component: NotFoundPageComponent }
 ];
 
 @NgModule({

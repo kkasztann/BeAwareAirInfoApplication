@@ -12,9 +12,7 @@ export class DatabaseService {
 
   constructor(public afs: AngularFirestore) {
     afs.firestore.settings({ timestampsInSnapshots: true });
-
     this.usersCollection = this.afs.collection('users', ref => ref.orderBy('name', 'asc'));
-
     this.users = this.afs.collection('users').snapshotChanges().map(changes => {
       return changes.map(a => {
         const data = a.payload.doc.data() as User;

@@ -2,7 +2,6 @@ import { Component, OnInit, DoCheck, Input } from '@angular/core';
 import { DatabaseService } from '../../services/database.service';
 import { User } from '../../models/User';
 import { AuthService } from '../../services/auth.service';
-
 import { SessionStorageService } from 'ngx-webstorage';
 import { HttpService } from '../../services/http.service';
 import { Stacje } from '../../models/Stacje';
@@ -21,7 +20,9 @@ export class UserComponent implements OnInit, DoCheck {
   editState = false;
   userToEdit: User;
   userIDtoShow: string;
-
+  userToCreate = false;
+  i: number;
+  wszystkieStacje;
 
   // healthInfo
   alergia = false;
@@ -30,18 +31,12 @@ export class UserComponent implements OnInit, DoCheck {
   pluca = false;
   inne = false;
 
-  // healthInfoC CheckBoxStatus
+  // healthInfoCheckBoxStatus
   alergiaStan: '';
   astmaStan: '';
   oskrzelaStan: '';
   plucaStan: '';
   inneStan: '';
-
-
-  i: number;
-  userToCreate = false;
-
-  wszystkieStacje;
 
   @Input() title = 'Default title';
 
@@ -55,7 +50,6 @@ export class UserComponent implements OnInit, DoCheck {
     this.oskrzelaStan = this.getSessionStorage('oskrzela');
     this.plucaStan = this.getSessionStorage('pluca');
     this.inneStan = this.getSessionStorage('inne');
-
     this.bezimienny = {
       name: 'Bezimienny',
       myID: '',
@@ -72,9 +66,6 @@ export class UserComponent implements OnInit, DoCheck {
 
   ngOnInit() {
 
-
-
-
     this.users = this.getSessionStorage('users');
 
     this.authService.getAuth().subscribe(auth => {
@@ -85,7 +76,6 @@ export class UserComponent implements OnInit, DoCheck {
 
     this.databaseService.getUser().subscribe(users => {
       this.users = users;
-
       for (this.i = 0; this.i < users.length; this.i++) {
         if (this.userIDtoShow === users[this.i].myID) {
           this.setSessionStorage('name', users[this.i].name);
@@ -99,7 +89,6 @@ export class UserComponent implements OnInit, DoCheck {
         this.databaseService.addUser(this.bezimienny);
         this.userToCreate = false;
       }
-
 
       this.setSessionStorage('users', users);
     });

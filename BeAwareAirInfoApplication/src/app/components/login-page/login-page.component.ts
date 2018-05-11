@@ -26,34 +26,32 @@ export class LoginPageComponent implements OnInit {
     this.authService.loginEmail(this.email, this.password)
       .then((res) => {
         this.flashMessages.show('Wszystko przebiegło poprawnie - użytkownik został zalogowany',
-        { cssClass: 'alert-success', timeout: 4000 });
+          { cssClass: 'alert-success', timeout: 4000 });
         this.router.navigate(['/user']);
       }).catch((err) => {
         this.flashMessages.show(err.message,
-        { cssClass: 'alert-danger', timeout: 4000 });
+          { cssClass: 'alert-danger', timeout: 4000 });
         this.router.navigate(['/login']);
       });
-
   }
 
   onClickGoogleLogin() {
     this.authService.loginGoogle()
-    .then((res) => {
-      this.flashMessages.show('Wszystko przebiegło poprawnie - użytkownik został zalogowany',
-      { cssClass: 'alert-success', timeout: 4000 });
-      this.router.navigate(['/user']);
-    }).catch( err =>  this.flashMessages.show(err.message,
-      { cssClass: 'alert-danger', timeout: 4000 }));
+      .then((res) => {
+        this.flashMessages.show('Wszystko przebiegło poprawnie - użytkownik został zalogowany',
+          { cssClass: 'alert-success', timeout: 4000 });
+        this.router.navigate(['/user']);
+      }).catch(err => this.flashMessages.show(err.message,
+        { cssClass: 'alert-danger', timeout: 4000 }));
   }
 
   onClickFacebookLogin() {
     this.authService.loginFacebook()
-    .then((res) => {
-      this.flashMessages.show('Wszystko przebiegło poprawnie - użytkownik został zalogowany',
-      { cssClass: 'alert-success', timeout: 4000 });
-      this.router.navigate(['/user']);
-    }).catch( err =>  this.flashMessages.show(err.message,
-      { cssClass: 'alert-danger', timeout: 4000 }));
+      .then((res) => {
+        this.flashMessages.show('Wszystko przebiegło poprawnie - użytkownik został zalogowany',
+          { cssClass: 'alert-success', timeout: 4000 });
+        this.router.navigate(['/user']);
+      }).catch(err => this.flashMessages.show(err.message,
+        { cssClass: 'alert-danger', timeout: 4000 }));
   }
-
 }

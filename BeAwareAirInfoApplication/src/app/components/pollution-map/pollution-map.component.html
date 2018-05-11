@@ -44,7 +44,6 @@
     <agm-map [latitude]="myLat" [longitude]="myLng" [zoom]=14>
       <agm-marker [latitude]="myLat" [longitude]="myLng"></agm-marker>
 
-
       <!--LEVEL0 'unknow' -->
       <span *ngFor="let stacja of wszystkieStacje">
         <span *ngIf="stacja.pollutionLevel == 0">

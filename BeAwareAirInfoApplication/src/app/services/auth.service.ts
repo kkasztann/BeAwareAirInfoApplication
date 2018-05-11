@@ -11,36 +11,32 @@ export class AuthService {
   ) { }
 
   loginFacebook() {
-    return this.afAuth.auth.signInWithPopup( new firebase.auth.FacebookAuthProvider());
+    return this.afAuth.auth.signInWithPopup(new firebase.auth.FacebookAuthProvider());
   }
 
   loginGoogle() {
-    return this.afAuth.auth.signInWithPopup( new firebase.auth.GoogleAuthProvider());
+    return this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
   }
-
 
   registerUser(email: string, password: string) {
     return new Promise((resolve, reject) => {
       this.afAuth.auth.createUserWithEmailAndPassword(email, password)
-      .then( userData => resolve(userData),
-    err => reject (err));
+        .then(userData => resolve(userData),
+          err => reject(err));
     });
   }
-
 
   loginEmail(email: string, password: string) {
     return new Promise((resolve, reject) => {
       this.afAuth.auth.signInWithEmailAndPassword(email, password)
-      .then( userData => resolve(userData),
-    err => reject (err));
+        .then(userData => resolve(userData),
+          err => reject(err));
     });
   }
 
-
   getAuth() {
-    return this.afAuth.authState.map ( auth => auth );
+    return this.afAuth.authState.map(auth => auth);
   }
-
 
   logout() {
     return this.afAuth.auth.signOut();

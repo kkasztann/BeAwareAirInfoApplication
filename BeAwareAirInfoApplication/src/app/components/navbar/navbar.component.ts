@@ -10,7 +10,6 @@ import { SessionStorageService } from 'ngx-webstorage';
 })
 export class NavbarComponent implements OnInit, DoCheck {
 
-
   public isLogin: boolean;
   public userName: string;
   public userEmail: string;
@@ -37,7 +36,7 @@ export class NavbarComponent implements OnInit, DoCheck {
         this.userEmail = auth.email;
         this.userPhoto = auth.photoURL;
         // tslint:disable-next-line:max-line-length
-        if (this.userPhoto === null) {this.userPhoto = 'https://firebasestorage.googleapis.com/v0/b/beawareairinfoapplication.appspot.com/o/user.svg?alt=media&token=b0c444cd-485c-4f7c-ab2a-5c20d664059a'; }
+        if (this.userPhoto === null) { this.userPhoto = 'https://firebasestorage.googleapis.com/v0/b/beawareairinfoapplication.appspot.com/o/user.svg?alt=media&token=b0c444cd-485c-4f7c-ab2a-5c20d664059a'; }
       } else {
         this.isLogin = false;
       }
@@ -46,9 +45,7 @@ export class NavbarComponent implements OnInit, DoCheck {
 
   onClickLogout() {
     this.flashMessages.show('Wylogowano :(',
-        { cssClass: 'alert-warning', timeout: 4000 });
+      { cssClass: 'alert-warning', timeout: 4000 });
     this.authService.logout();
-
   }
-
 }
