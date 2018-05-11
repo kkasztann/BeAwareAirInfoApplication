@@ -8,7 +8,6 @@ import { HomePageComponent } from './components/home-page/home-page.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { RegisterPageComponent } from './components/register-page/register-page.component';
 import { LoginPageComponent } from './components/login-page/login-page.component';
-import { PrivatePageComponent } from './components/private-page/private-page.component';
 import { NotFoundPageComponent } from './components/not-found-page/not-found-page.component';
 import { AgmCoreModule } from '@agm/core';
 import { FlashMessagesModule } from 'angular2-flash-messages';
@@ -44,7 +43,6 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     NavbarComponent,
     RegisterPageComponent,
     LoginPageComponent,
-    PrivatePageComponent,
     NotFoundPageComponent,
     FooterComponent,
     UserComponent,

@@ -63,7 +63,6 @@ export class DataComponent implements OnInit {
 
   getStacjeObszar(latSW: string, longSW: string, latNE: string, longNE: string) {
     this.httpService.getStacjeObszar(latSW, longSW, latNE, longNE).retry(3).subscribe(stacje => {
-      console.log(stacje);
       this.wszystkieStacje = stacje;
     }, (error: HttpErrorResponse) => {
       console.log(error);
@@ -73,7 +72,6 @@ export class DataComponent implements OnInit {
 
   getStacjaPobliska(lat: string, long: string) {
     this.httpService.getStacjaPobliska(lat, long).retry(3).subscribe(stacja => {
-      console.log(stacja);
       this.stacjaPobrana = stacja;
       //  console.log(this.pobliskaStacja);
     }, (error: HttpErrorResponse) => {
@@ -85,7 +83,6 @@ export class DataComponent implements OnInit {
 
   getStacjaID(id: string) {
     this.httpService.getStacjaID(id).retry(3).subscribe(stacja => {
-      console.log(stacja);
       this.stacjaPobrana = stacja;
     }, (error: HttpErrorResponse) => {
       console.log(error);
@@ -103,7 +100,6 @@ export class DataComponent implements OnInit {
   }
 
   getChart1() {
-    console.log(this.stacjaPobrana);
     this.chart1 = new Chart('chart1', {
       type: 'horizontalBar',
       data: {
@@ -132,7 +128,6 @@ export class DataComponent implements OnInit {
 
 
   getChart2() {
-    console.log(this.stacjaPobrana);
     this.chart2 = new Chart('chart2', {
       type: 'horizontalBar',
       data: {
@@ -161,7 +156,6 @@ export class DataComponent implements OnInit {
 
 
   getChart3() {
-    console.log(this.stacjaPobrana);
     this.chart3 = new Chart('chart3', {
       type: 'horizontalBar',
       data: {
@@ -190,7 +184,6 @@ export class DataComponent implements OnInit {
 
 
   getChart4() {
-    console.log(this.stacjaPobrana);
     this.chart4 = new Chart('chart4', {
       type: 'horizontalBar',
       data: {

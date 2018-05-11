@@ -43,7 +43,6 @@ export class PollutionMapComponent implements OnInit {
 
   getStacjeObszar(latSW: string, longSW: string, latNE: string, longNE: string) {
     this.httpService.getStacjeObszar(latSW, longSW, latNE, longNE).retry(3).subscribe(stacje => {
-       console.log(stacje);
       this.wszystkieStacje = stacje;
       this.goWorkWithMap = true;
     }, (error: HttpErrorResponse) => {

@@ -84,7 +84,6 @@ export class UserComponent implements OnInit, DoCheck {
     });
 
     this.databaseService.getUser().subscribe(users => {
-      console.log(users);
       this.users = users;
 
       for (this.i = 0; this.i < users.length; this.i++) {
@@ -128,7 +127,6 @@ export class UserComponent implements OnInit, DoCheck {
 
   getStacjeObszar(latSW: string, longSW: string, latNE: string, longNE: string) {
     this.httpService.getStacjeObszar(latSW, longSW, latNE, longNE).retry(3).subscribe(stacje => {
-      console.log(stacje);
       this.wszystkieStacje = stacje;
     }, (error: HttpErrorResponse) => {
       console.log(error);

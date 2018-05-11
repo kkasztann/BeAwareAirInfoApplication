@@ -49,7 +49,7 @@
         <a class="nav-link" href="#" (click)="onClickLogout()">Logout</a>
       </li>
       <li class="nav-item text-center " *ngIf="isLogin">
-        <a class="nav-link badge  badge-secondary mt-2">{{userName}}
+        <a class="nav-link badge  badge-secondary mt-2" href="#" routerLink="/user">{{userName}}
           <br>{{userEmail}}</a>
       </li>
       <li class="nav-item text-center" *ngIf="isLogin">
