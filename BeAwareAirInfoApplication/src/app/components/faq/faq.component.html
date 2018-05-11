@@ -4,7 +4,7 @@
   <p>
     <button type="button" class="btn btn-outline-success" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed"
       aria-controls="collapseExample">
-      Czy korzystanie z aplikacji jest całkowicie darmowe?
+      Czy korzystanie z aplikacji<br *ngIf="screenWidth < 770"> jest całkowicie darmowe?
     </button>
   </p>
   <div id="collapseExample" [ngbCollapse]="isCollapsed">
@@ -20,7 +20,7 @@
   <p>
     <button type="button" class="btn btn-outline-success" (click)="isCollapsed2 = !isCollapsed2" [attr.aria-expanded]="!isCollapsed2"
       aria-controls="collapseExample">
-      Czy strona/aplikacja zbiera informacje o użytkownikach?
+      Czy strona/aplikacja zbiera<br *ngIf="screenWidth < 770"> informacje o użytkownikach?
     </button>
   </p>
   <div id="collapseExample" [ngbCollapse]="isCollapsed2">
@@ -35,7 +35,7 @@
   <p>
     <button type="button" class="btn btn-outline-success" (click)="isCollapsed3 = !isCollapsed3" [attr.aria-expanded]="!isCollapsed3"
       aria-controls="collapseExample">
-      Czy aplikacja rozpowszechnia informacje o użytkownikach podmiotom trzecim?
+      Czy aplikacja rozpowszechnia<br *ngIf="screenWidth < 770"> informacje o użytkownikach<br *ngIf="screenWidth < 770"> podmiotom trzecim?
     </button>
   </p>
   <div id="collapseExample" [ngbCollapse]="isCollapsed3">
@@ -51,7 +51,7 @@
   <p>
     <button type="button" class="btn btn-outline-success" (click)="isCollapsed4 = !isCollapsed4" [attr.aria-expanded]="!isCollapsed4"
       aria-controls="collapseExample">
-      Czy mogę zmienić raz wprowadzone dane użytkownika?
+      Czy mogę zmienić raz wprowadzone<br *ngIf="screenWidth < 770"> dane użytkownika?
     </button>
   </p>
   <div id="collapseExample" [ngbCollapse]="isCollapsed4">
@@ -66,7 +66,7 @@
   <p>
     <button type="button" class="btn btn-outline-success" (click)="isCollapsed5 = !isCollapsed5" [attr.aria-expanded]="!isCollapsed5"
       aria-controls="collapseExample">
-      Dlaczego nie są dostarczane dane na temat wszystkich miast w Polsce?
+      Dlaczego nie są dostarczane<br *ngIf="screenWidth < 770"> dane na temat wszystkich<br *ngIf="screenWidth < 770"> miast w Polsce?
     </button>
   </p>
   <div id="collapseExample" [ngbCollapse]="isCollapsed5">
@@ -95,7 +95,7 @@
   <p>
     <button type="button" class="btn btn-outline-success" (click)="isCollapsed7 = !isCollapsed7" [attr.aria-expanded]="!isCollapsed7"
       aria-controls="collapseExample">
-      Czy udostępniony jest do wglądu kod źrodłowy projektu?
+      Czy udostępniony jest do wglądu<br *ngIf="screenWidth < 770"> kod źrodłowy projektu?
     </button>
   </p>
   <div id="collapseExample" [ngbCollapse]="isCollapsed7">
