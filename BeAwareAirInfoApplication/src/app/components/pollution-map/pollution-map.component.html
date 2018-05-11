@@ -40,6 +40,7 @@
   </div>
 </div>
 <div *ngIf='goWorkWithMap'>
+  <div id="mapa">
   <agm-map [latitude]="myLat" [longitude]="myLng" [zoom]=14>
     <agm-marker [latitude]="myLat" [longitude]="myLng"></agm-marker>
 
@@ -98,6 +99,7 @@
       </span>
     </span>
   </agm-map>
+</div>
 </div>
 
 
