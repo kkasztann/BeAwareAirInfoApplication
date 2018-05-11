@@ -12,22 +12,18 @@ import { Stacje } from '../../models/Stacje';
 })
 export class PollutionMapComponent implements OnInit {
 
-
   myLat = 0;
   myLng = 0;
 
- wszystkieStacje;
- goWorkWithMap = false;
+  wszystkieStacje;
+  goWorkWithMap = false;
 
- lvl0 = 'white';
- lvl1 = 'lime';
- lvl2 = 'yellow';
- lvl3 = 'orange';
- lvl4 = 'red';
- lvl5 = 'black';
-
-
-
+  lvl0 = 'white';
+  lvl1 = 'lime';
+  lvl2 = 'yellow';
+  lvl3 = 'orange';
+  lvl4 = 'red';
+  lvl5 = 'black';
 
   constructor(private httpService: HttpService) {
     this.getMyPosition();
@@ -37,8 +33,6 @@ export class PollutionMapComponent implements OnInit {
      this.getStacjeObszar('48.903136', '14.196732', '54.632825', '24.030281');
     // Małopolska +-
     // this.getStacjeObszar('50.436440', '22.783392', '50.002493', '19.106864');
-    console.log(this.wszystkieStacje);
-
   }
 
   getStacjeObszar(latSW: string, longSW: string, latNE: string, longNE: string) {
@@ -55,8 +49,6 @@ export class PollutionMapComponent implements OnInit {
       navigator.geolocation.getCurrentPosition( pos => {
           this.myLng = pos.coords.longitude;
           this.myLat = pos.coords.latitude;
-          console.log(this.myLat);
-          console.log(this.myLng);
         });
      }
   }
