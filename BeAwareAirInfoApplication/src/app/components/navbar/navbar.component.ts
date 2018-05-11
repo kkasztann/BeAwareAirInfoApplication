@@ -15,6 +15,8 @@ export class NavbarComponent implements OnInit, DoCheck {
   public userName: string;
   public userEmail: string;
   public userPhoto: string;
+  // tslint:disable-next-line:max-line-length
+  public logo = 'https://firebasestorage.googleapis.com/v0/b/beawareairinfoapplication.appspot.com/o/logo.jpg?alt=media&token=af968afb-e23d-4ec3-8a70-3356e63fff3d';
 
   constructor(
     public authService: AuthService,
