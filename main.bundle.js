@@ -296,16 +296,14 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_home_page_home_page_component__ = __webpack_require__("./src/app/components/home-page/home-page.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_login_page_login_page_component__ = __webpack_require__("./src/app/components/login-page/login-page.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_register_page_register_page_component__ = __webpack_require__("./src/app/components/register-page/register-page.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_private_page_private_page_component__ = __webpack_require__("./src/app/components/private-page/private-page.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_not_found_page_not_found_page_component__ = __webpack_require__("./src/app/components/not-found-page/not-found-page.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_user_user_component__ = __webpack_require__("./src/app/components/user/user.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_data_data_component__ = __webpack_require__("./src/app/components/data/data.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__guards_auth_guard__ = __webpack_require__("./src/app/guards/auth.guard.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_pollution_map_pollution_map_component__ = __webpack_require__("./src/app/components/pollution-map/pollution-map.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_faq_faq_component__ = __webpack_require__("./src/app/components/faq/faq.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_support_support_component__ = __webpack_require__("./src/app/components/support/support.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__components_rate_rate_component__ = __webpack_require__("./src/app/components/rate/rate.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__components_about_us_about_us_component__ = __webpack_require__("./src/app/components/about-us/about-us.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_not_found_page_not_found_page_component__ = __webpack_require__("./src/app/components/not-found-page/not-found-page.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_user_user_component__ = __webpack_require__("./src/app/components/user/user.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_data_data_component__ = __webpack_require__("./src/app/components/data/data.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__guards_auth_guard__ = __webpack_require__("./src/app/guards/auth.guard.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_pollution_map_pollution_map_component__ = __webpack_require__("./src/app/components/pollution-map/pollution-map.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_faq_faq_component__ = __webpack_require__("./src/app/components/faq/faq.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_support_support_component__ = __webpack_require__("./src/app/components/support/support.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_about_us_about_us_component__ = __webpack_require__("./src/app/components/about-us/about-us.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -325,21 +323,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-
-
 var routes = [
     { path: '', component: __WEBPACK_IMPORTED_MODULE_2__components_home_page_home_page_component__["a" /* HomePageComponent */] },
     { path: 'login', component: __WEBPACK_IMPORTED_MODULE_3__components_login_page_login_page_component__["a" /* LoginPageComponent */] },
     { path: 'register', component: __WEBPACK_IMPORTED_MODULE_4__components_register_page_register_page_component__["a" /* RegisterPageComponent */] },
-    { path: 'private', component: __WEBPACK_IMPORTED_MODULE_5__components_private_page_private_page_component__["a" /* PrivatePageComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_9__guards_auth_guard__["a" /* AuthGuard */]] },
-    { path: 'user', component: __WEBPACK_IMPORTED_MODULE_7__components_user_user_component__["a" /* UserComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_9__guards_auth_guard__["a" /* AuthGuard */]] },
-    { path: 'pollution-map', component: __WEBPACK_IMPORTED_MODULE_10__components_pollution_map_pollution_map_component__["a" /* PollutionMapComponent */] },
-    { path: 'data', component: __WEBPACK_IMPORTED_MODULE_8__components_data_data_component__["a" /* DataComponent */] },
-    { path: 'faq', component: __WEBPACK_IMPORTED_MODULE_11__components_faq_faq_component__["a" /* FaqComponent */] },
-    { path: 'support', component: __WEBPACK_IMPORTED_MODULE_12__components_support_support_component__["a" /* SupportComponent */] },
-    { path: 'rate', component: __WEBPACK_IMPORTED_MODULE_13__components_rate_rate_component__["a" /* RateComponent */] },
-    { path: 'about-us', component: __WEBPACK_IMPORTED_MODULE_14__components_about_us_about_us_component__["a" /* AboutUsComponent */] },
-    { path: '**', component: __WEBPACK_IMPORTED_MODULE_6__components_not_found_page_not_found_page_component__["a" /* NotFoundPageComponent */] }
+    { path: 'user', component: __WEBPACK_IMPORTED_MODULE_6__components_user_user_component__["a" /* UserComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_8__guards_auth_guard__["a" /* AuthGuard */]] },
+    { path: 'pollution-map', component: __WEBPACK_IMPORTED_MODULE_9__components_pollution_map_pollution_map_component__["a" /* PollutionMapComponent */] },
+    { path: 'data', component: __WEBPACK_IMPORTED_MODULE_7__components_data_data_component__["a" /* DataComponent */] },
+    { path: 'faq', component: __WEBPACK_IMPORTED_MODULE_10__components_faq_faq_component__["a" /* FaqComponent */] },
+    { path: 'support', component: __WEBPACK_IMPORTED_MODULE_11__components_support_support_component__["a" /* SupportComponent */] },
+    { path: 'about-us', component: __WEBPACK_IMPORTED_MODULE_12__components_about_us_about_us_component__["a" /* AboutUsComponent */] },
+    { path: '**', component: __WEBPACK_IMPORTED_MODULE_5__components_not_found_page_not_found_page_component__["a" /* NotFoundPageComponent */] }
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
@@ -360,14 +354,14 @@ var AppRoutingModule = /** @class */ (function () {
 /***/ "./src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<app-navbar></app-navbar>\r\n<div class=\"container\">\r\n  <flash-messages></flash-messages>\r\n  <router-outlet></router-outlet>\r\n</div>\r\n<app-footer></app-footer>\r\n"
+module.exports = "<app-navbar></app-navbar>\r\n<div class=\"container\">\r\n  <flash-messages></flash-messages>\r\n  <router-outlet></router-outlet>\r\n</div>\r\n<div id=\"space\"></div>\r\n<app-footer></app-footer>\r\n"
 
 /***/ }),
 
 /***/ "./src/app/app.component.scss":
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = "#space {\n  margin-bottom: 25%; }\n"
 
 /***/ }),
 
@@ -417,36 +411,34 @@ var AppComponent = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_navbar_navbar_component__ = __webpack_require__("./src/app/components/navbar/navbar.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_register_page_register_page_component__ = __webpack_require__("./src/app/components/register-page/register-page.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_login_page_login_page_component__ = __webpack_require__("./src/app/components/login-page/login-page.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_private_page_private_page_component__ = __webpack_require__("./src/app/components/private-page/private-page.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_not_found_page_not_found_page_component__ = __webpack_require__("./src/app/components/not-found-page/not-found-page.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__agm_core__ = __webpack_require__("./node_modules/@agm/core/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_angular2_flash_messages__ = __webpack_require__("./node_modules/angular2-flash-messages/module/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_13_angular2_flash_messages__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_angularfire2__ = __webpack_require__("./node_modules/angularfire2/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_angularfire2_auth__ = __webpack_require__("./node_modules/angularfire2/auth/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16_angularfire2_firestore__ = __webpack_require__("./node_modules/angularfire2/firestore/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__environments_environment_prod__ = __webpack_require__("./src/environments/environment.prod.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__services_auth_service__ = __webpack_require__("./src/app/services/auth.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__guards_auth_guard__ = __webpack_require__("./src/app/guards/auth.guard.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__components_footer_footer_component__ = __webpack_require__("./src/app/components/footer/footer.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__components_user_user_component__ = __webpack_require__("./src/app/components/user/user.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__services_database_service__ = __webpack_require__("./src/app/services/database.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__components_data_data_component__ = __webpack_require__("./src/app/components/data/data.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__services_http_service__ = __webpack_require__("./src/app/services/http.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__angular_common_http__ = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__components_pollution_map_pollution_map_component__ = __webpack_require__("./src/app/components/pollution-map/pollution-map.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27_ngx_webstorage__ = __webpack_require__("./node_modules/ngx-webstorage/dist/app.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__components_faq_faq_component__ = __webpack_require__("./src/app/components/faq/faq.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__components_rate_rate_component__ = __webpack_require__("./src/app/components/rate/rate.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__components_support_support_component__ = __webpack_require__("./src/app/components/support/support.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__components_about_us_about_us_component__ = __webpack_require__("./src/app/components/about-us/about-us.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_not_found_page_not_found_page_component__ = __webpack_require__("./src/app/components/not-found-page/not-found-page.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__agm_core__ = __webpack_require__("./node_modules/@agm/core/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_angular2_flash_messages__ = __webpack_require__("./node_modules/angular2-flash-messages/module/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_12_angular2_flash_messages__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_angularfire2__ = __webpack_require__("./node_modules/angularfire2/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_angularfire2_auth__ = __webpack_require__("./node_modules/angularfire2/auth/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_angularfire2_firestore__ = __webpack_require__("./node_modules/angularfire2/firestore/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__environments_environment_prod__ = __webpack_require__("./src/environments/environment.prod.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__services_auth_service__ = __webpack_require__("./src/app/services/auth.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__guards_auth_guard__ = __webpack_require__("./src/app/guards/auth.guard.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__components_footer_footer_component__ = __webpack_require__("./src/app/components/footer/footer.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__components_user_user_component__ = __webpack_require__("./src/app/components/user/user.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__services_database_service__ = __webpack_require__("./src/app/services/database.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__components_data_data_component__ = __webpack_require__("./src/app/components/data/data.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__services_http_service__ = __webpack_require__("./src/app/services/http.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__angular_common_http__ = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__components_pollution_map_pollution_map_component__ = __webpack_require__("./src/app/components/pollution-map/pollution-map.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26_ngx_webstorage__ = __webpack_require__("./node_modules/ngx-webstorage/dist/app.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__components_faq_faq_component__ = __webpack_require__("./src/app/components/faq/faq.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__components_support_support_component__ = __webpack_require__("./src/app/components/support/support.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__components_about_us_about_us_component__ = __webpack_require__("./src/app/components/about-us/about-us.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__ng_bootstrap_ng_bootstrap__ = __webpack_require__("./node_modules/@ng-bootstrap/ng-bootstrap/index.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-
 
 
 
@@ -490,33 +482,32 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_7__components_navbar_navbar_component__["a" /* NavbarComponent */],
                 __WEBPACK_IMPORTED_MODULE_8__components_register_page_register_page_component__["a" /* RegisterPageComponent */],
                 __WEBPACK_IMPORTED_MODULE_9__components_login_page_login_page_component__["a" /* LoginPageComponent */],
-                __WEBPACK_IMPORTED_MODULE_10__components_private_page_private_page_component__["a" /* PrivatePageComponent */],
-                __WEBPACK_IMPORTED_MODULE_11__components_not_found_page_not_found_page_component__["a" /* NotFoundPageComponent */],
-                __WEBPACK_IMPORTED_MODULE_20__components_footer_footer_component__["a" /* FooterComponent */],
-                __WEBPACK_IMPORTED_MODULE_21__components_user_user_component__["a" /* UserComponent */],
-                __WEBPACK_IMPORTED_MODULE_23__components_data_data_component__["a" /* DataComponent */],
-                __WEBPACK_IMPORTED_MODULE_26__components_pollution_map_pollution_map_component__["a" /* PollutionMapComponent */],
-                __WEBPACK_IMPORTED_MODULE_28__components_faq_faq_component__["a" /* FaqComponent */],
-                __WEBPACK_IMPORTED_MODULE_29__components_rate_rate_component__["a" /* RateComponent */],
-                __WEBPACK_IMPORTED_MODULE_30__components_support_support_component__["a" /* SupportComponent */],
-                __WEBPACK_IMPORTED_MODULE_31__components_about_us_about_us_component__["a" /* AboutUsComponent */]
+                __WEBPACK_IMPORTED_MODULE_10__components_not_found_page_not_found_page_component__["a" /* NotFoundPageComponent */],
+                __WEBPACK_IMPORTED_MODULE_19__components_footer_footer_component__["a" /* FooterComponent */],
+                __WEBPACK_IMPORTED_MODULE_20__components_user_user_component__["a" /* UserComponent */],
+                __WEBPACK_IMPORTED_MODULE_22__components_data_data_component__["a" /* DataComponent */],
+                __WEBPACK_IMPORTED_MODULE_25__components_pollution_map_pollution_map_component__["a" /* PollutionMapComponent */],
+                __WEBPACK_IMPORTED_MODULE_27__components_faq_faq_component__["a" /* FaqComponent */],
+                __WEBPACK_IMPORTED_MODULE_28__components_support_support_component__["a" /* SupportComponent */],
+                __WEBPACK_IMPORTED_MODULE_29__components_about_us_about_us_component__["a" /* AboutUsComponent */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
                 __WEBPACK_IMPORTED_MODULE_4__app_routing_module__["a" /* AppRoutingModule */],
                 __WEBPACK_IMPORTED_MODULE_1__angular_common__["CommonModule"],
                 __WEBPACK_IMPORTED_MODULE_3__angular_forms__["a" /* FormsModule */],
-                __WEBPACK_IMPORTED_MODULE_27_ngx_webstorage__["a" /* Ng2Webstorage */],
-                __WEBPACK_IMPORTED_MODULE_15_angularfire2_auth__["b" /* AngularFireAuthModule */],
-                __WEBPACK_IMPORTED_MODULE_14_angularfire2__["a" /* AngularFireModule */].initializeApp(__WEBPACK_IMPORTED_MODULE_17__environments_environment_prod__["a" /* environment */].firebaseConfig),
-                __WEBPACK_IMPORTED_MODULE_16_angularfire2_firestore__["b" /* AngularFirestoreModule */],
-                __WEBPACK_IMPORTED_MODULE_13_angular2_flash_messages__["FlashMessagesModule"],
-                __WEBPACK_IMPORTED_MODULE_25__angular_common_http__["b" /* HttpClientModule */],
-                __WEBPACK_IMPORTED_MODULE_12__agm_core__["a" /* AgmCoreModule */].forRoot({
+                __WEBPACK_IMPORTED_MODULE_26_ngx_webstorage__["a" /* Ng2Webstorage */],
+                __WEBPACK_IMPORTED_MODULE_14_angularfire2_auth__["b" /* AngularFireAuthModule */],
+                __WEBPACK_IMPORTED_MODULE_13_angularfire2__["a" /* AngularFireModule */].initializeApp(__WEBPACK_IMPORTED_MODULE_16__environments_environment_prod__["a" /* environment */].firebaseConfig),
+                __WEBPACK_IMPORTED_MODULE_15_angularfire2_firestore__["b" /* AngularFirestoreModule */],
+                __WEBPACK_IMPORTED_MODULE_12_angular2_flash_messages__["FlashMessagesModule"],
+                __WEBPACK_IMPORTED_MODULE_24__angular_common_http__["b" /* HttpClientModule */],
+                __WEBPACK_IMPORTED_MODULE_30__ng_bootstrap_ng_bootstrap__["a" /* NgbModule */].forRoot(),
+                __WEBPACK_IMPORTED_MODULE_11__agm_core__["a" /* AgmCoreModule */].forRoot({
                     apiKey: 'AIzaSyAKI-T37eiih6T2TuOuuh_GS5lzHMCYxeU'
                 })
             ],
-            providers: [__WEBPACK_IMPORTED_MODULE_18__services_auth_service__["a" /* AuthService */], __WEBPACK_IMPORTED_MODULE_19__guards_auth_guard__["a" /* AuthGuard */], __WEBPACK_IMPORTED_MODULE_13_angular2_flash_messages__["FlashMessagesService"], __WEBPACK_IMPORTED_MODULE_22__services_database_service__["a" /* DatabaseService */], __WEBPACK_IMPORTED_MODULE_24__services_http_service__["a" /* HttpService */]],
+            providers: [__WEBPACK_IMPORTED_MODULE_17__services_auth_service__["a" /* AuthService */], __WEBPACK_IMPORTED_MODULE_18__guards_auth_guard__["a" /* AuthGuard */], __WEBPACK_IMPORTED_MODULE_12_angular2_flash_messages__["FlashMessagesService"], __WEBPACK_IMPORTED_MODULE_21__services_database_service__["a" /* DatabaseService */], __WEBPACK_IMPORTED_MODULE_23__services_http_service__["a" /* HttpService */]],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */]]
         })
     ], AppModule);
@@ -530,7 +521,7 @@ var AppModule = /** @class */ (function () {
 /***/ "./src/app/components/about-us/about-us.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<p>\r\n  about-us works!\r\n</p>\r\n"
+module.exports = "<div class=\"row\">\r\n  <div class=\"col-md-12 mt-3 mx-auto text-center card\">\r\n    <div class=\"form-group card-body\">\r\n      <h2>Na koniec kilka słów o twórcach BeAware - Air Info Application</h2>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-md-6 mx-auto mt-2\">\r\n    <div class=\"card\">\r\n      <div class=\"card-body\">\r\n          <div class=\"card mb-3\">\r\n              <h3 class=\"card-header\">Daniel Słowik</h3>\r\n              <div class=\"card-body\">\r\n                <h5 class=\"card-title\">Współtwórca</h5>\r\n              </div>\r\n              <img style=\"height: 400px; width: 300px; display: block; margin-left: auto;  margin-right:auto\" src=\"https://firebasestorage.googleapis.com/v0/b/beawareairinfoapplication.appspot.com/o/ds.jpg?alt=media&token=d7709ab6-5fd9-42c0-bb75-bd2269f510ff\" alt=\"Card image\">\r\n              <div class=\"card-body\">\r\n                <p class=\"card-text text-justify\">Student 3 roku kierunku Informatyka Stosowana i specjalizacji Inżynieria Oprogramowania na Uniwersytecie Ekonomicznym w Krakowie.\r\n                  Swoją przygodę z programowaniem rozpoczął 7 lat temu z roku na rok zwiększając poświęcany czas.\r\n                  Na dłużej zatrzymał się przy C++, następnie jego serce podbiła Java, a realizując ten projekt zainteresował się również Angularem.\r\n                  Poza programowaniem od prawie 10 lat realizuje się w swojej drugiej pasji jaką jest parkour/freerun prowadząc kanał na YT,\r\n                  warsztaty dla początkujących oraz pracując jako trener.</p>\r\n              </div>\r\n            </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"col-md-6 mx-auto mt-2\">\r\n    <div class=\"card\">\r\n      <div class=\"card-body\">\r\n          <div class=\"card mb-3\">\r\n              <h3 class=\"card-header\">Mateusz Otręba</h3>\r\n              <div class=\"card-body\">\r\n                <h5 class=\"card-title\">Współtwórca</h5>\r\n              </div>\r\n              <img style=\"height: 400px; width: 300px; display: block; margin-left: auto;  margin-right:auto \" src=\"https://firebasestorage.googleapis.com/v0/b/beawareairinfoapplication.appspot.com/o/mo.jpg?alt=media&token=e1335da0-afd5-4e18-8432-5c205655d177\" alt=\"Card image\">\r\n              <div class=\"card-body\">\r\n                <p class=\"card-text text-justify\">Student 3 roku kierunku Informatyka Stosowana i specjalizacji Inżynieria Oprogramowania na Uniwersytecie Ekonomicznym w Krakowie.\r\n                  Osoba z pozytywnym spojrzeniem na swiat, pełna energii i żądna nowych wyzwań. Zwolennik front-endowych technologii programowania ktory swoją przygodę z kodowaniem rozpoczynał\r\n                  od \"eksperymentów\" z językiem C++ ktory jednak nie przypadł mu do gustu. Mateusz poza studiami i nauką,\r\n                  pracuje jako trener-instruktor w parku trampolin oraz hobbystycznie występuje w amatorskiej drużynie koszykówki.</p>\r\n              </div>\r\n            </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n\r\n\r\n\r\n\r\n"
 
 /***/ }),
 
@@ -580,7 +571,7 @@ var AboutUsComponent = /** @class */ (function () {
 /***/ "./src/app/components/data/data.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\r\n  <div class=\"col-md-12 mx-auto text-center card\">\r\n    <div class=\"form-group card-body\">\r\n      <h2>Choose station</h2>\r\n      <select class=\"custom-select\" [(ngModel)]=\"stacjaID\">\r\n        <option *ngIf=\"zalogowany\" [value]=\"defaultLocation\">Default Location</option>\r\n        <option *ngFor=\"let s of wszystkieStacje\" [value]=\"s.id\">{{s.address.locality}} {{s.address.route}} {{s.address.streetNumber}} </option>\r\n      </select>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n<div>\r\n  <button style=\"margin: 0 auto; display: flex;\" (click)=\"getStacjaID(stacjaID)\" (click)=\"getCharts()\">Show charts for station with ID: {{stacjaID}}</button>\r\n</div>\r\n<div class=\"row\">\r\n  <div class=\"col-md-6 mx-auto mt-2\">\r\n    <div class=\"card\">\r\n      <div class=\"card-body\">\r\n        <div *ngIf=\"chart1\">\r\n          <canvas id=\"chart1\">{{ chart1 }}</canvas>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"col-md-6 mx-auto mt-2\">\r\n    <div class=\"card\">\r\n      <div class=\"card-body\">\r\n        <div *ngIf=\"chart2\">\r\n          <canvas id=\"chart2\">{{ chart2 }}</canvas>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-md-6 mx-auto mt-2\">\r\n    <div class=\"card\">\r\n      <div class=\"card-body\">\r\n        <div *ngIf=\"chart3\">\r\n          <canvas id=\"chart3\">{{ chart3 }}</canvas>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"col-md-6 mx-auto mt-2\">\r\n    <div class=\"card\">\r\n      <div class=\"card-body\">\r\n        <div *ngIf=\"chart4\">\r\n          <canvas id=\"chart4\">{{ chart4 }}</canvas>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n<br>\r\n<br>\r\n"
+module.exports = "<div class=\"row\">\r\n  <div class=\"col-md-12 mt-3 mx-auto text-center card\">\r\n    <div class=\"form-group card-body\">\r\n      <h2>Choose station</h2>\r\n      <select class=\"custom-select\" [(ngModel)]=\"stacjaID\">\r\n        <option *ngIf=\"zalogowany\" [value]=\"defaultLocation\">Default Location</option>\r\n        <option *ngFor=\"let s of wszystkieStacje\" [value]=\"s.id\">{{s.address.locality}} {{s.address.route}} {{s.address.streetNumber}} </option>\r\n      </select>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n<div>\r\n  <button class=\"btn btn-success btn-lg\"style=\"margin: 0 auto; display: flex;\" (click)=\"getStacjaID(stacjaID)\" (click)=\"getCharts()\">Show charts for station with ID: {{stacjaID}}</button>\r\n</div>\r\n<div class=\"row\">\r\n  <div class=\"col-md-6 mx-auto mt-2 \">\r\n    <div class=\"card\">\r\n      <div class=\"card-body\">\r\n        <div *ngIf=\"chart1\">\r\n          <canvas id=\"chart1\">{{ chart1 }}</canvas>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"col-md-6 mx-auto mt-2\">\r\n    <div class=\"card\">\r\n      <div class=\"card-body\">\r\n        <div *ngIf=\"chart2\">\r\n          <canvas id=\"chart2\">{{ chart2 }}</canvas>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-md-6 mx-auto mt-2\">\r\n    <div class=\"card\">\r\n      <div class=\"card-body\">\r\n        <div *ngIf=\"chart3\">\r\n          <canvas id=\"chart3\">{{ chart3 }}</canvas>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"col-md-6 mx-auto mt-2\">\r\n    <div class=\"card\">\r\n      <div class=\"card-body\">\r\n        <div *ngIf=\"chart4\">\r\n          <canvas id=\"chart4\">{{ chart4 }}</canvas>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n<br>\r\n<br>\r\n"
 
 /***/ }),
 
@@ -654,7 +645,6 @@ var DataComponent = /** @class */ (function () {
     DataComponent.prototype.getStacjeObszar = function (latSW, longSW, latNE, longNE) {
         var _this = this;
         this.httpService.getStacjeObszar(latSW, longSW, latNE, longNE).retry(3).subscribe(function (stacje) {
-            console.log(stacje);
             _this.wszystkieStacje = stacje;
         }, function (error) {
             console.log(error);
@@ -663,7 +653,6 @@ var DataComponent = /** @class */ (function () {
     DataComponent.prototype.getStacjaPobliska = function (lat, long) {
         var _this = this;
         this.httpService.getStacjaPobliska(lat, long).retry(3).subscribe(function (stacja) {
-            console.log(stacja);
             _this.stacjaPobrana = stacja;
             //  console.log(this.pobliskaStacja);
         }, function (error) {
@@ -673,7 +662,6 @@ var DataComponent = /** @class */ (function () {
     DataComponent.prototype.getStacjaID = function (id) {
         var _this = this;
         this.httpService.getStacjaID(id).retry(3).subscribe(function (stacja) {
-            console.log(stacja);
             _this.stacjaPobrana = stacja;
         }, function (error) {
             console.log(error);
@@ -686,7 +674,6 @@ var DataComponent = /** @class */ (function () {
         this.getChart4();
     };
     DataComponent.prototype.getChart1 = function () {
-        console.log(this.stacjaPobrana);
         this.chart1 = new __WEBPACK_IMPORTED_MODULE_3_chart_js__["Chart"]('chart1', {
             type: 'horizontalBar',
             data: {
@@ -712,7 +699,6 @@ var DataComponent = /** @class */ (function () {
         });
     };
     DataComponent.prototype.getChart2 = function () {
-        console.log(this.stacjaPobrana);
         this.chart2 = new __WEBPACK_IMPORTED_MODULE_3_chart_js__["Chart"]('chart2', {
             type: 'horizontalBar',
             data: {
@@ -738,7 +724,6 @@ var DataComponent = /** @class */ (function () {
         });
     };
     DataComponent.prototype.getChart3 = function () {
-        console.log(this.stacjaPobrana);
         this.chart3 = new __WEBPACK_IMPORTED_MODULE_3_chart_js__["Chart"]('chart3', {
             type: 'horizontalBar',
             data: {
@@ -764,7 +749,6 @@ var DataComponent = /** @class */ (function () {
         });
     };
     DataComponent.prototype.getChart4 = function () {
-        console.log(this.stacjaPobrana);
         this.chart4 = new __WEBPACK_IMPORTED_MODULE_3_chart_js__["Chart"]('chart4', {
             type: 'horizontalBar',
             data: {
@@ -807,7 +791,7 @@ var DataComponent = /** @class */ (function () {
 /***/ "./src/app/components/faq/faq.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<p>\r\n  faq works!\r\n</p>\r\n"
+module.exports = "<div class=\"jumbotron mt-3\">\r\n  <h2 class=\"display-6\">FAQ - Przed kontaktem sprawdź listę często zadawanych pytań</h2>\r\n  <br>\r\n  <p>\r\n    <button type=\"button\" class=\"btn btn-outline-success\" (click)=\"isCollapsed = !isCollapsed\" [attr.aria-expanded]=\"!isCollapsed\"\r\n      aria-controls=\"collapseExample\">\r\n      Czy korzystanie z aplikacji jest całkowicie darmowe?\r\n    </button>\r\n  </p>\r\n  <div id=\"collapseExample\" [ngbCollapse]=\"isCollapsed\">\r\n    <div class=\"card\">\r\n      <div class=\"card-body\">\r\n        Korzystanie z aplikacji jest i będzie darmowe, BeAwareAirInfo została stworzona z misją zwrócenia uwagi na problem z jakością\r\n        powietrza w Polsce, oraz z nadzieją na jej poprawę.\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n\r\n  <p>\r\n    <button type=\"button\" class=\"btn btn-outline-success\" (click)=\"isCollapsed2 = !isCollapsed2\" [attr.aria-expanded]=\"!isCollapsed2\"\r\n      aria-controls=\"collapseExample\">\r\n      Czy strona/aplikacja zbiera informacje o użytkownikach?\r\n    </button>\r\n  </p>\r\n  <div id=\"collapseExample\" [ngbCollapse]=\"isCollapsed2\">\r\n    <div class=\"card\">\r\n      <div class=\"card-body\">\r\n        Strona zbiera i przechowuje tylko te informacje, które uzytkownik sam postanowi wprowadzić.\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n\r\n  <p>\r\n    <button type=\"button\" class=\"btn btn-outline-success\" (click)=\"isCollapsed3 = !isCollapsed3\" [attr.aria-expanded]=\"!isCollapsed3\"\r\n      aria-controls=\"collapseExample\">\r\n      Czy aplikacja rozpowszechnia informacje o użytkownikach podmiotom trzecim?\r\n    </button>\r\n  </p>\r\n  <div id=\"collapseExample\" [ngbCollapse]=\"isCollapsed3\">\r\n    <div class=\"card\">\r\n      <div class=\"card-body\">\r\n        Informacje wprowdzane przez użytkowników slużą twórcom jedynie poprawie jakości dostarczanych danych i nie są w żaden sposób\r\n        rozpowszechniane czy wykorzystywane.\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n\r\n  <p>\r\n    <button type=\"button\" class=\"btn btn-outline-success\" (click)=\"isCollapsed4 = !isCollapsed4\" [attr.aria-expanded]=\"!isCollapsed4\"\r\n      aria-controls=\"collapseExample\">\r\n      Czy mogę zmienić raz wprowadzone dane użytkownika?\r\n    </button>\r\n  </p>\r\n  <div id=\"collapseExample\" [ngbCollapse]=\"isCollapsed4\">\r\n    <div class=\"card\">\r\n      <div class=\"card-body\">\r\n        Użytkownik ma w dowolnym momencie możliwość zmiany informacji na temat swojego stanu zdrowia jak i równiez na temat domyślnej\r\n        lokalizacji, w zakładce User Settings.\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n  <p>\r\n    <button type=\"button\" class=\"btn btn-outline-success\" (click)=\"isCollapsed5 = !isCollapsed5\" [attr.aria-expanded]=\"!isCollapsed5\"\r\n      aria-controls=\"collapseExample\">\r\n      Dlaczego nie są dostarczane dane na temat wszystkich miast w Polsce?\r\n    </button>\r\n  </p>\r\n  <div id=\"collapseExample\" [ngbCollapse]=\"isCollapsed5\">\r\n    <div class=\"card\">\r\n      <div class=\"card-body\">\r\n        Dane o stanie o jakości powietrza pobierane sa za pomoca specjalnych czujnikow. Tak wiec twórcy dysponuja danymi jedynie\r\n        z miejsc gdzie takie czujniki sie znajdują, ich liczba jednak stale wzrasta.\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n  <p>\r\n    <button type=\"button\" class=\"btn btn-outline-success\" (click)=\"isCollapsed6 = !isCollapsed6\" [attr.aria-expanded]=\"!isCollapsed6\"\r\n      aria-controls=\"collapseExample\">\r\n      Jak często aktualizowane są dane?\r\n    </button>\r\n  </p>\r\n  <div id=\"collapseExample\" [ngbCollapse]=\"isCollapsed6\">\r\n    <div class=\"card\">\r\n      <div class=\"card-body\">\r\n        Dane dostarczane przez aplikację aktualizowane są o pełnych godzinach.\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n  <p>\r\n    <button type=\"button\" class=\"btn btn-outline-success\" (click)=\"isCollapsed7 = !isCollapsed7\" [attr.aria-expanded]=\"!isCollapsed7\"\r\n      aria-controls=\"collapseExample\">\r\n      Czy udostępniony jest do wglądu kod źrodłowy projektu?\r\n    </button>\r\n  </p>\r\n  <div id=\"collapseExample\" [ngbCollapse]=\"isCollapsed7\">\r\n    <div class=\"card\">\r\n      <div class=\"card-body\">\r\n        Odnośnik do kodu źrodłowego znajduje się w zakładce SUPPORT\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n\r\n</div>\r\n"
 
 /***/ }),
 
@@ -836,6 +820,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var FaqComponent = /** @class */ (function () {
     function FaqComponent() {
+        this.isCollapsed = true;
+        this.isCollapsed2 = true;
+        this.isCollapsed3 = true;
+        this.isCollapsed4 = true;
+        this.isCollapsed5 = true;
+        this.isCollapsed6 = true;
+        this.isCollapsed7 = true;
     }
     FaqComponent.prototype.ngOnInit = function () {
     };
@@ -857,7 +848,7 @@ var FaqComponent = /** @class */ (function () {
 /***/ "./src/app/components/footer/footer.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<footer class=\"bg-dark\" >\r\n  Be Aware Air Info Application 2018 - projekt zrealizowany w ramach przedmiotu SPA - Uniwersytet Ekonomiczny w Krakowie - Daniel Słowik - Mateusz Otręba\r\n</footer>\r\n"
+module.exports = "<footer class=\"bg-primary\">\r\n    Be Aware Air Info Application 2018<br>\r\n    Uniwersytet Ekonomiczny w Krakowie<br>\r\n    Projekt zrealizowany w ramach przedmiotu SPA<br>\r\n    Daniel Słowik & Mateusz Otręba<br>\r\n  </footer>\r\n"
 
 /***/ }),
 
@@ -907,7 +898,7 @@ var FooterComponent = /** @class */ (function () {
 /***/ "./src/app/components/home-page/home-page.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"jumbotron mt-3\">\r\n  <h1 class=\"display-3\">Be Aware - Air Info Application</h1>\r\n  <p class=\"lead\">Opis projektu:</p>\r\n  <hr class=\"my-1\">\r\n  <p>Aplikacja ma na celu informowanie użytkowników o stanie jakości powietrza w wybranych miastach w Polsce.\r\n    Dane pobierane są z \"Airly API\" oraz \"Jakość powietrza w Polsce - API\".\r\n    Każdy zalogowany użytkownik będzie mógł wprowadzić: domyślne miejsce pobytu, wiek i aktualny stan zdrowia.\r\n    Ma to na celu lepsze dostosowania wiadomości i ostrzeżeń wysyłanych do użytkownika.\r\n    Osoba korzystająca z \"Be Aware AIA\",\r\n    oprócz ręcznego sprawdzania stanu pogody ma również możliwość włączenia automatycznych powiadomień,\r\n    ostrzegających o wysokim stężeniu szkodliwych substancji.\r\n    Oprócz wyżej wymienionych podstawowych funkcjonalności oprogramowanie dostarcza również historyczne dane\r\n    na temat stanu powietrza, oraz dodatkowo opcje takie jak na przykład informacja dla mieszkańców wybranych miast\r\n    odnośnie darmowej komunikacji miejskiej w związku z wysokim stopniem zanieczyszczenia powietrza.</p>\r\n  <p class=\"lead\">\r\n    <a class=\"btn btn-outline-primary btn-lg\" href=\"https://github.com/kkasztann/BeAwareAirInfoApplication\" role=\"button\">Check on GitHub</a>\r\n  </p>\r\n</div>\r\n"
+module.exports = "<div class=\"jumbotron mt-3\">\r\n  <h1 class=\"display-3\">Be Aware - Air Info Application</h1>\r\n  <p class=\"lead\">Opis projektu:</p>\r\n  <hr class=\"my-1\">\r\n  <p>Aplikacja ma na celu informowanie użytkowników o stanie jakości powietrza w wybranych miastach w Polsce.\r\n    Dane pobierane są z \"Airly API\" zawierającej w sobie \"Jakość powietrza w Polsce - API\".\r\n    Każdy zalogowany użytkownik może wprowadzić między innymi domyślne miejsce pobytu oraz aktualny stan zdrowia.\r\n    Ma to na celu lepsze dostosowania wiadomości i ostrzeżeń wysyłanych do użytkownika w przyszłości.\r\n    Oprogramowanie dostarcza również historyczne dane na temat stanu powietrza w wybranym miejscu.</p>\r\n    <div class=\"text-center\">\r\n    <img src=\"{{home1}}\" class=\"rounded-circle\">\r\n    <img src=\"{{home2}}\" class=\"rounded-circle\">\r\n    </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -936,6 +927,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var HomePageComponent = /** @class */ (function () {
     function HomePageComponent() {
+        // tslint:disable-next-line:max-line-length
+        this.home1 = 'https://firebasestorage.googleapis.com/v0/b/beawareairinfoapplication.appspot.com/o/home1.png?alt=media&token=74e6a7ea-cd17-4cfe-b74c-03be05165365';
+        // tslint:disable-next-line:max-line-length
+        this.home2 = 'https://firebasestorage.googleapis.com/v0/b/beawareairinfoapplication.appspot.com/o/home2.png?alt=media&token=aa0218b1-f5b6-4618-8daf-2e6ac51fdad3';
     }
     HomePageComponent.prototype.ngOnInit = function () {
     };
@@ -957,7 +952,7 @@ var HomePageComponent = /** @class */ (function () {
 /***/ "./src/app/components/login-page/login-page.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\r\n  <div class=\"col-md-6 mx-auto mt-5\">\r\n    <div class=\"card\">\r\n      <div class=\"card-body\">\r\n        <h1 class=\"text-center\">LOGIN</h1>\r\n        <form (submit)=\"onSubmitLogin()\">\r\n          <div class=\"form-group\">\r\n            <label for=\"email\">Email</label>\r\n            <input type=\"email\" name=\"email\" id=\"email\" [(ngModel)]=\"email\" class=\"form-control\">\r\n          </div>\r\n          <div class=\"form-group\">\r\n            <label for=\"password\">Password</label>\r\n            <input type=\"password\" name=\"password\" id=\"password\" [(ngModel)]=\"password\" class=\"form-control\">\r\n          </div>\r\n          <input type=\"submit\" value=\"SUBMIT\" class=\"btn btn-primary btn-block btn-lg\">\r\n        </form>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n<div class=\"row\">\r\n  <div class=\"col-md-6 mx-auto mt-2\">\r\n    <div class=\"card\">\r\n      <div class=\"card-body d-flex justify-content-around\">\r\n        <button class=\"btn btn-lg btn-facebook\" (click)=\"onClickFacebookLogin()\"><i class=\"fa fa-facebook\"></i> Facebook</button>\r\n        <button class=\"btn btn-lg btn-google\" (click)=\"onClickGoogleLogin()\"><i class=\"fa fa-google-plus\"></i> Google</button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div class=\"row\">\r\n  <div class=\"col-md-6 mx-auto mt-3\">\r\n    <div class=\"card\">\r\n      <div class=\"card-body\">\r\n        <h1 class=\"text-center\">LOGIN</h1>\r\n        <form (submit)=\"onSubmitLogin()\">\r\n          <div class=\"form-group\">\r\n            <label for=\"email\">Email</label>\r\n            <input type=\"email\" name=\"email\" id=\"email\" [(ngModel)]=\"email\" class=\"form-control\">\r\n          </div>\r\n          <div class=\"form-group\">\r\n            <label for=\"password\">Password</label>\r\n            <input type=\"password\" name=\"password\" id=\"password\" [(ngModel)]=\"password\" class=\"form-control\">\r\n          </div>\r\n          <input type=\"submit\" value=\"SUBMIT\" class=\"btn btn-primary btn-block btn-lg\">\r\n        </form>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n<div class=\"row\">\r\n  <div class=\"col-md-6 mx-auto mt-2\">\r\n    <div class=\"card\">\r\n      <div class=\"card-body d-flex justify-content-around\">\r\n        <button class=\"btn btn-lg btn-facebook\" (click)=\"onClickFacebookLogin()\"><i class=\"fa fa-facebook\"></i> Facebook</button>\r\n        <button class=\"btn btn-lg btn-google\" (click)=\"onClickGoogleLogin()\"><i class=\"fa fa-google-plus\"></i> Google</button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -1046,14 +1041,14 @@ var LoginPageComponent = /** @class */ (function () {
 /***/ "./src/app/components/navbar/navbar.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-expand-lg navbar-dark bg-primary\">\r\n  <a class=\"navbar-brand\" href=\"#\">be-aware\r\n    <span class=\"text-info\">AirInfoApplication</span>\r\n  </a>\r\n  <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarColor01\" aria-controls=\"navbarColor01\"\r\n    aria-expanded=\"false\" aria-label=\"Toggle navigation\">\r\n    <span class=\"navbar-toggler-icon\"></span>\r\n  </button>\r\n\r\n  <div class=\"collapse navbar-collapse\" id=\"navbarColor01\">\r\n    <ul class=\"navbar-nav mr-auto\">\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link\" href=\"#\" routerLink=\"/\">Home\r\n          <span class=\"sr-only\">(current)</span>\r\n        </a>\r\n      </li>\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link\" href=\"#\" routerLink=\"/pollution-map\">Pollution map\r\n          <span class=\"sr-only\">(current)</span>\r\n        </a>\r\n      </li>\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link\" href=\"#\" routerLink=\"/data\">Data\r\n          <span class=\"sr-only\">(current)</span>\r\n        </a>\r\n      </li>\r\n      <li class=\"nav-item dropdown\">\r\n        <a class=\"nav-link dropdown-toggle\" data-toggle=\"dropdown\" href=\"#\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">Help</a>\r\n        <div class=\"dropdown-menu\" x-placement=\"bottom-start\" style=\"position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 38px, 0px);\">\r\n          <a class=\"dropdown-item\" href=\"#\" routerLink=\"/faq\">FAQ</a>\r\n          <a class=\"dropdown-item\" href=\"#\" routerLink=\"/rate\">Rate</a>\r\n          <a class=\"dropdown-item\" href=\"#\" routerLink=\"/support\">Support</a>\r\n          <div class=\"dropdown-divider\"></div>\r\n          <a class=\"dropdown-item\" href=\"#\" routerLink=\"/about-us\">About us</a>\r\n        </div>\r\n      </li>\r\n\r\n    </ul>\r\n    <ul class=\"navbar-nav mx-auto\">\r\n      <li class=\"nav-item\" *ngIf=\"!isLogin\">\r\n        <a class=\"nav-link\" href=\"#\" routerLink=\"/login\">Login</a>\r\n      </li>\r\n      <li class=\"nav-item\" *ngIf=\"!isLogin\">\r\n        <a class=\"nav-link\" href=\"#\" routerLink=\"/register\">Register</a>\r\n      </li>\r\n      <li class=\"nav-item\" *ngIf=\"isLogin\">\r\n        <a class=\"nav-link\" href=\"#\" routerLink=\"/user\">User Settings</a>\r\n      </li>\r\n      <li class=\"nav-item\" *ngIf=\"isLogin\">\r\n        <a class=\"nav-link\" href=\"#\" (click)=\"onClickLogout()\">Logout</a>\r\n      </li>\r\n      <li class=\"nav-item text-center \" *ngIf=\"isLogin\">\r\n        <a class=\"nav-link badge  badge-secondary mt-2\">{{userName}}\r\n          <br>{{userEmail}}</a>\r\n      </li>\r\n      <li class=\"nav-item text-center\" *ngIf=\"isLogin\">\r\n        <img src=\"{{userPhoto}}\" class=\"rounded-circle\">\r\n      </li>\r\n    </ul>\r\n  </div>\r\n</nav>\r\n"
+module.exports = "<nav class=\"navbar navbar-expand-lg navbar-dark bg-primary size-bigger\">\r\n  <a class=\"navbar-brand logo\" href=\"#\" routerLink=\"/\">\r\n      <img src=\"{{logo}}\">\r\n  </a>\r\n  <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarColor01\" aria-controls=\"navbarColor01\"\r\n    aria-expanded=\"false\" aria-label=\"Toggle navigation\">\r\n    <span class=\"navbar-toggler-icon\"></span>\r\n  </button>\r\n\r\n  <div class=\"collapse navbar-collapse\" id=\"navbarColor01\">\r\n    <ul class=\"navbar-nav mr-auto\">\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link\" href=\"#\" routerLink=\"/\">Home\r\n          <span class=\"sr-only\">(current)</span>\r\n        </a>\r\n      </li>\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link\" href=\"#\" routerLink=\"/pollution-map\">Pollution map\r\n          <span class=\"sr-only\">(current)</span>\r\n        </a>\r\n      </li>\r\n      <li class=\"nav-item\">\r\n        <a class=\"nav-link\" href=\"#\" routerLink=\"/data\">Data\r\n          <span class=\"sr-only\">(current)</span>\r\n        </a>\r\n      </li>\r\n      <li class=\"nav-item dropdown\">\r\n        <a class=\"nav-link dropdown-toggle\" data-toggle=\"dropdown\" href=\"#\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">Help</a>\r\n        <div class=\"dropdown-menu\" x-placement=\"bottom-start\" style=\"position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 38px, 0px);\">\r\n          <a class=\"dropdown-item\" href=\"#\" routerLink=\"/faq\">FAQ</a>\r\n          <a class=\"dropdown-item\" href=\"#\" routerLink=\"/support\">Support</a>\r\n          <div class=\"dropdown-divider\"></div>\r\n          <a class=\"dropdown-item\" href=\"#\" routerLink=\"/about-us\">About us</a>\r\n        </div>\r\n      </li>\r\n\r\n    </ul>\r\n    <ul class=\"navbar-nav mx-auto\">\r\n      <li class=\"nav-item\" *ngIf=\"!isLogin\">\r\n        <a class=\"nav-link\" href=\"#\" routerLink=\"/login\">Login</a>\r\n      </li>\r\n      <li class=\"nav-item\" *ngIf=\"!isLogin\">\r\n        <a class=\"nav-link\" href=\"#\" routerLink=\"/register\">Register</a>\r\n      </li>\r\n      <li class=\"nav-item\" *ngIf=\"isLogin\">\r\n        <a class=\"nav-link\" href=\"#\" routerLink=\"/user\">User Settings</a>\r\n      </li>\r\n      <li class=\"nav-item\" *ngIf=\"isLogin\">\r\n        <a class=\"nav-link\" href=\"#\" (click)=\"onClickLogout()\">Logout</a>\r\n      </li>\r\n      <li class=\"nav-item text-center \" *ngIf=\"isLogin\">\r\n        <a class=\"nav-link badge  badge-secondary mt-2\" href=\"#\" routerLink=\"/user\">{{userName}}\r\n          <br>{{userEmail}}</a>\r\n      </li>\r\n      <li class=\"nav-item text-center\" *ngIf=\"isLogin\">\r\n        <img src=\"{{userPhoto}}\" class=\"rounded-circle\">\r\n      </li>\r\n    </ul>\r\n  </div>\r\n</nav>\r\n"
 
 /***/ }),
 
 /***/ "./src/app/components/navbar/navbar.component.scss":
 /***/ (function(module, exports) {
 
-module.exports = "img.rounded-circle {\n  width: 45px;\n  height: 45px; }\n"
+module.exports = "img.rounded-circle {\n  width: 45px;\n  height: 45px; }\n\n.size-bigger {\n  font-size: 1.25em; }\n\n.logo {\n  margin-right: 2%; }\n"
 
 /***/ }),
 
@@ -1085,6 +1080,8 @@ var NavbarComponent = /** @class */ (function () {
         this.authService = authService;
         this.flashMessages = flashMessages;
         this.sessionSt = sessionSt;
+        // tslint:disable-next-line:max-line-length
+        this.logo = 'https://firebasestorage.googleapis.com/v0/b/beawareairinfoapplication.appspot.com/o/logo.jpg?alt=media&token=af968afb-e23d-4ec3-8a70-3356e63fff3d';
     }
     NavbarComponent.prototype.ngDoCheck = function () {
         this.userName = this.sessionSt.retrieve('name');
@@ -1184,14 +1181,14 @@ var NotFoundPageComponent = /** @class */ (function () {
 /***/ "./src/app/components/pollution-map/pollution-map.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\r\n    <div class=\"col-md-6 mx-auto mt-2 mb-3\">\r\n      <div class=\"card\">\r\n        <div class=\"card-body text-center\">\r\n          <h3>Pollution level based on CAQI scale <i class=\"fa fa-map-signs\"></i> </h3>\r\n        </div>\r\n        <div class=\"row text\">\r\n          <div class=\"col-md-6\">\r\n            <span style=\"color:white; font-size: 24px\"> <i class=\"fa fa-square\"></i></span>Level0 - undefinded<br>\r\n            <span style=\"color:lime; font-size: 24px\"><i class=\"fa fa-square\"></i></span>Level1 - very low<br>\r\n            <span style=\"color:yellow; font-size: 24px\"><i class=\"fa fa-square\"></i></span>Level2 - low<br>\r\n        </div>\r\n        <div class=\"col-md-6\">\r\n          <span style=\"color:orange; font-size: 24px;\"><i class=\"fa fa-square \"></i></span>Level3 - medium<br>\r\n          <span style=\"color:red; font-size: 24px\"><i class=\"fa fa-square\"></i></span>Level4 - high<br>\r\n          <span style=\"color:black; font-size: 24px\"><i class=\"fa fa-square\"></i></span>Level5 - very high<br>\r\n      </div>\r\n    </div>\r\n</div>\r\n    </div>\r\n  </div>\r\n<div *ngIf='goWorkWithMap'>\r\n  <agm-map\r\n  [latitude]=\"myLat\"\r\n  [longitude]=\"myLng\"\r\n  [zoom]=14>\r\n    <agm-marker\r\n    [latitude]=\"myLat\"\r\n    [longitude]=\"myLng\"></agm-marker>\r\n\r\n\r\n    <!--LEVEL0 'unknow' -->\r\n    <span *ngFor=\"let stacja of wszystkieStacje\">\r\n      <span *ngIf=\"stacja.pollutionLevel == 0\">\r\n        <agm-circle\r\n        [latitude]=stacja.location.latitude\r\n        [longitude]=stacja.location.longitude\r\n        [circleDraggable]=\"false\"\r\n        [editable]=\"false\"\r\n        [fillColor]=\"lvl0\"\r\n        [radius]=\"1500\"\r\n        [fillOpacity]=\"0.08\">\r\n        </agm-circle>\r\n      </span>\r\n    </span>\r\n\r\n    <!--LEVEL1 -->\r\n    <span *ngFor=\"let stacja of wszystkieStacje\">\r\n        <span *ngIf=\"stacja.pollutionLevel == 1\">\r\n          <agm-circle\r\n          [latitude]=stacja.location.latitude\r\n          [longitude]=stacja.location.longitude\r\n          [circleDraggable]=\"false\"\r\n          [editable]=\"false\"\r\n          [fillColor]=\"lvl1\"\r\n          [radius]=\"1500\"\r\n          [fillOpacity]=\"0.08\">\r\n          </agm-circle>\r\n        </span>\r\n      </span>\r\n\r\n    <!--LEVEL2-->\r\n    <span *ngFor=\"let stacja of wszystkieStacje\">\r\n        <span *ngIf=\"stacja.pollutionLevel == 2\">\r\n          <agm-circle\r\n          [latitude]=stacja.location.latitude\r\n          [longitude]=stacja.location.longitude\r\n          [circleDraggable]=\"false\"\r\n          [editable]=\"false\"\r\n          [fillColor]=\"lvl2\"\r\n          [radius]=\"1500\"\r\n          [fillOpacity]=\"0.08\">\r\n          </agm-circle>\r\n        </span>\r\n      </span>\r\n\r\n    <!--LEVEL3-->\r\n    <span *ngFor=\"let stacja of wszystkieStacje\">\r\n        <span *ngIf=\"stacja.pollutionLevel == 3\">\r\n          <agm-circle\r\n          [latitude]=stacja.location.latitude\r\n          [longitude]=stacja.location.longitude\r\n          [circleDraggable]=\"false\"\r\n          [editable]=\"false\"\r\n          [fillColor]=\"lvl3\"\r\n          [radius]=\"1500\"\r\n          [fillOpacity]=\"0.08\">\r\n          </agm-circle>\r\n        </span>\r\n      </span>\r\n\r\n    <!--LEVEL4-->\r\n    <span *ngFor=\"let stacja of wszystkieStacje\">\r\n        <span *ngIf=\"stacja.pollutionLevel == 4\">\r\n          <agm-circle\r\n          [latitude]=stacja.location.latitude\r\n          [longitude]=stacja.location.longitude\r\n          [circleDraggable]=\"false\"\r\n          [editable]=\"false\"\r\n          [fillColor]=\"lvl4\"\r\n          [radius]=\"1500\"\r\n          [fillOpacity]=\"0.08\">\r\n          </agm-circle>\r\n        </span>\r\n      </span>\r\n\r\n    <!--LEVEL5-->\r\n    <span *ngFor=\"let stacja of wszystkieStacje\">\r\n        <span *ngIf=\"stacja.pollutionLevel == 5\">\r\n          <agm-circle\r\n          [latitude]=stacja.location.latitude\r\n          [longitude]=stacja.location.longitude\r\n          [circleDraggable]=\"false\"\r\n          [editable]=\"false\"\r\n          [fillColor]=\"lvl5\"\r\n          [radius]=\"1500\"\r\n          [fillOpacity]=\"0.08\">\r\n          </agm-circle>\r\n        </span>\r\n      </span>\r\n\r\n  <div *ngFor=\"let s of wszystkieStacje\">\r\n    {{s.location.lat}}\r\n  </div>\r\n"
+module.exports = "<div class=\"row\">\r\n  <div class=\"col-md-6 mx-auto mt-3 mb-3\">\r\n    <div class=\"card\">\r\n      <div class=\"card-body text-center\">\r\n        <h3>Pollution level based on CAQI scale\r\n          <i class=\"fa fa-map-signs\"></i>\r\n        </h3>\r\n      </div>\r\n      <div class=\"row text\">\r\n        <div class=\"col-md-6\">\r\n          <span style=\"color:white; font-size: 24px\">\r\n            <i class=\"fa fa-square\"></i>\r\n          </span>Level0 - undefinded\r\n          <br>\r\n          <span style=\"color:lime; font-size: 24px\">\r\n            <i class=\"fa fa-square\"></i>\r\n          </span>Level1 - very low\r\n          <br>\r\n          <span style=\"color:yellow; font-size: 24px\">\r\n            <i class=\"fa fa-square\"></i>\r\n          </span>Level2 - low\r\n          <br>\r\n        </div>\r\n        <div class=\"col-md-6\">\r\n          <span style=\"color:orange; font-size: 24px;\">\r\n            <i class=\"fa fa-square \"></i>\r\n          </span>Level3 - medium\r\n          <br>\r\n          <span style=\"color:red; font-size: 24px\">\r\n            <i class=\"fa fa-square\"></i>\r\n          </span>Level4 - high\r\n          <br>\r\n          <span style=\"color:black; font-size: 24px\">\r\n            <i class=\"fa fa-square\"></i>\r\n          </span>Level5 - very high\r\n          <br>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n<div *ngIf='goWorkWithMap'>\r\n  <div id=\"mapa\">\r\n    <agm-map [latitude]=\"myLat\" [longitude]=\"myLng\" [zoom]=14>\r\n      <agm-marker [latitude]=\"myLat\" [longitude]=\"myLng\"></agm-marker>\r\n\r\n\r\n      <!--LEVEL0 'unknow' -->\r\n      <span *ngFor=\"let stacja of wszystkieStacje\">\r\n        <span *ngIf=\"stacja.pollutionLevel == 0\">\r\n          <agm-circle [latitude]=stacja.location.latitude [longitude]=stacja.location.longitude [circleDraggable]=\"false\" [editable]=\"false\"\r\n            [fillColor]=\"lvl0\" [radius]=\"1500\" [fillOpacity]=\"0.08\">\r\n          </agm-circle>\r\n        </span>\r\n      </span>\r\n\r\n      <!--LEVEL1 -->\r\n      <span *ngFor=\"let stacja of wszystkieStacje\">\r\n        <span *ngIf=\"stacja.pollutionLevel == 1\">\r\n          <agm-circle [latitude]=stacja.location.latitude [longitude]=stacja.location.longitude [circleDraggable]=\"false\" [editable]=\"false\"\r\n            [fillColor]=\"lvl1\" [radius]=\"1500\" [fillOpacity]=\"0.08\">\r\n          </agm-circle>\r\n        </span>\r\n      </span>\r\n\r\n      <!--LEVEL2-->\r\n      <span *ngFor=\"let stacja of wszystkieStacje\">\r\n        <span *ngIf=\"stacja.pollutionLevel == 2\">\r\n          <agm-circle [latitude]=stacja.location.latitude [longitude]=stacja.location.longitude [circleDraggable]=\"false\" [editable]=\"false\"\r\n            [fillColor]=\"lvl2\" [radius]=\"1500\" [fillOpacity]=\"0.08\">\r\n          </agm-circle>\r\n        </span>\r\n      </span>\r\n\r\n      <!--LEVEL3-->\r\n      <span *ngFor=\"let stacja of wszystkieStacje\">\r\n        <span *ngIf=\"stacja.pollutionLevel == 3\">\r\n          <agm-circle [latitude]=stacja.location.latitude [longitude]=stacja.location.longitude [circleDraggable]=\"false\" [editable]=\"false\"\r\n            [fillColor]=\"lvl3\" [radius]=\"1500\" [fillOpacity]=\"0.08\">\r\n          </agm-circle>\r\n        </span>\r\n      </span>\r\n\r\n      <!--LEVEL4-->\r\n      <span *ngFor=\"let stacja of wszystkieStacje\">\r\n        <span *ngIf=\"stacja.pollutionLevel == 4\">\r\n          <agm-circle [latitude]=stacja.location.latitude [longitude]=stacja.location.longitude [circleDraggable]=\"false\" [editable]=\"false\"\r\n            [fillColor]=\"lvl4\" [radius]=\"1500\" [fillOpacity]=\"0.08\">\r\n          </agm-circle>\r\n        </span>\r\n      </span>\r\n\r\n      <!--LEVEL5-->\r\n      <span *ngFor=\"let stacja of wszystkieStacje\">\r\n        <span *ngIf=\"stacja.pollutionLevel == 5\">\r\n          <agm-circle [latitude]=stacja.location.latitude [longitude]=stacja.location.longitude [circleDraggable]=\"false\" [editable]=\"false\"\r\n            [fillColor]=\"lvl5\" [radius]=\"1500\" [fillOpacity]=\"0.08\">\r\n          </agm-circle>\r\n        </span>\r\n      </span>\r\n    </agm-map>\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
 /***/ "./src/app/components/pollution-map/pollution-map.component.scss":
 /***/ (function(module, exports) {
 
-module.exports = "agm-map {\n  height: 600px; }\n"
+module.exports = "agm-map {\n  height: 600px; }\n\n#mapa {\n  border: medium solid #303030; }\n"
 
 /***/ }),
 
@@ -1234,12 +1231,10 @@ var PollutionMapComponent = /** @class */ (function () {
         this.getStacjeObszar('48.903136', '14.196732', '54.632825', '24.030281');
         // Małopolska +-
         // this.getStacjeObszar('50.436440', '22.783392', '50.002493', '19.106864');
-        console.log(this.wszystkieStacje);
     };
     PollutionMapComponent.prototype.getStacjeObszar = function (latSW, longSW, latNE, longNE) {
         var _this = this;
         this.httpService.getStacjeObszar(latSW, longSW, latNE, longNE).retry(3).subscribe(function (stacje) {
-            console.log(stacje);
             _this.wszystkieStacje = stacje;
             _this.goWorkWithMap = true;
         }, function (error) {
@@ -1252,8 +1247,6 @@ var PollutionMapComponent = /** @class */ (function () {
             navigator.geolocation.getCurrentPosition(function (pos) {
                 _this.myLng = pos.coords.longitude;
                 _this.myLat = pos.coords.latitude;
-                console.log(_this.myLat);
-                console.log(_this.myLng);
             });
         }
     };
@@ -1272,110 +1265,10 @@ var PollutionMapComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/components/private-page/private-page.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"jumbotron mt-3\">\r\n  <h1 class=\"display-3\">PRIVATE PAGE</h1>\r\n  <p class=\"lead\">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>\r\n  <hr class=\"my-4\">\r\n  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>\r\n  <p class=\"lead\">\r\n    <a class=\"btn btn-outline-primary btn-lg\" href=\"/learn-more\" role=\"button\">Learn more</a>\r\n  </p>\r\n</div>\r\n"
-
-/***/ }),
-
-/***/ "./src/app/components/private-page/private-page.component.scss":
-/***/ (function(module, exports) {
-
-module.exports = ""
-
-/***/ }),
-
-/***/ "./src/app/components/private-page/private-page.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PrivatePageComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var PrivatePageComponent = /** @class */ (function () {
-    function PrivatePageComponent() {
-    }
-    PrivatePageComponent.prototype.ngOnInit = function () {
-    };
-    PrivatePageComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'app-private-page',
-            template: __webpack_require__("./src/app/components/private-page/private-page.component.html"),
-            styles: [__webpack_require__("./src/app/components/private-page/private-page.component.scss")]
-        }),
-        __metadata("design:paramtypes", [])
-    ], PrivatePageComponent);
-    return PrivatePageComponent;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/components/rate/rate.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<p>\r\n  rate works!\r\n</p>\r\n"
-
-/***/ }),
-
-/***/ "./src/app/components/rate/rate.component.scss":
-/***/ (function(module, exports) {
-
-module.exports = ""
-
-/***/ }),
-
-/***/ "./src/app/components/rate/rate.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RateComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var RateComponent = /** @class */ (function () {
-    function RateComponent() {
-    }
-    RateComponent.prototype.ngOnInit = function () {
-    };
-    RateComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'app-rate',
-            template: __webpack_require__("./src/app/components/rate/rate.component.html"),
-            styles: [__webpack_require__("./src/app/components/rate/rate.component.scss")]
-        }),
-        __metadata("design:paramtypes", [])
-    ], RateComponent);
-    return RateComponent;
-}());
-
-
-
-/***/ }),
-
 /***/ "./src/app/components/register-page/register-page.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\r\n    <div class=\"col-md-6 mx-auto mt-5\">\r\n      <div class=\"card\">\r\n        <div class=\"card-body\">\r\n          <h1 class=\"text-center\">REGISTER</h1>\r\n          <form (submit)=\"onSubmitAddUser()\">\r\n            <div class=\"form-group\">\r\n              <label for=\"email\">Email</label>\r\n              <input type=\"email\" name=\"email\" id=\"email\" [(ngModel)]=\"email\" class=\"form-control\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label for=\"password\">Password</label>\r\n              <input type=\"password\" name=\"password\" id=\"password\" [(ngModel)]=\"password\" class=\"form-control\">\r\n            </div>\r\n            <input type=\"submit\" value=\"SUBMIT\" class=\"btn btn-primary btn-block btn-lg\">\r\n          </form>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n"
+module.exports = "<div class=\"row\">\r\n    <div class=\"col-md-6 mx-auto mt-3\">\r\n      <div class=\"card\">\r\n        <div class=\"card-body\">\r\n          <h1 class=\"text-center\">REGISTER</h1>\r\n          <form (submit)=\"onSubmitAddUser()\">\r\n            <div class=\"form-group\">\r\n              <label for=\"email\">Email</label>\r\n              <input type=\"email\" name=\"email\" id=\"email\" [(ngModel)]=\"email\" class=\"form-control\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label for=\"password\">Password</label>\r\n              <input type=\"password\" name=\"password\" id=\"password\" [(ngModel)]=\"password\" class=\"form-control\">\r\n            </div>\r\n            <input type=\"submit\" value=\"SUBMIT\" class=\"btn btn-primary btn-block btn-lg\">\r\n          </form>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n"
 
 /***/ }),
 
@@ -1447,14 +1340,14 @@ var RegisterPageComponent = /** @class */ (function () {
 /***/ "./src/app/components/support/support.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<p>\r\n  support works!\r\n</p>\r\n"
+module.exports = "<div class=\"jumbotron mt-3\">\r\n  <div class=\"support-info\">\r\n    Jeżeli masz jakieś pytania prosimy zajrzyj wcześniej do zakladki FAQ. Jeżeli nie znajdziesz tam odpowiedzi na swoje pytanie\r\n    lub chcesz pomóc w rozwoju aplikacji prosimy o kontakt na maila:\r\n    <br>\r\n    <br>\r\n\r\n    <p>\r\n      <button type=\"button\" class=\"btn btn-outline-success\" (click)=\"isCollapsedMail1 = !isCollapsedMail1; \" [attr.aria-expanded]=\"!isCollapsedMail1\"\r\n        aria-controls=\"collapseExample\">\r\n        Mateusz Otręba\r\n      </button>\r\n\r\n      <button type=\"button\" class=\"btn btn-outline-success\" (click)=\"isCollapsedMail2 = !isCollapsedMail2\" [attr.aria-expanded]=\"!isCollapsedMail2\"\r\n        aria-controls=\"collapseExample\">\r\n        Daniel Słowik\r\n      </button>\r\n\r\n    </p>\r\n\r\n\r\n    <div id=\"collapseExample\" [ngbCollapse]=\"isCollapsedMail1\">\r\n      <div class=\"card\">\r\n        <div class=\"card-body\">\r\n          Mateusz Otręba: motreba1996@gmail.com\r\n        </div>\r\n      </div>\r\n    </div>\r\n\r\n    <div id=\"collapseExample\" [ngbCollapse]=\"isCollapsedMail2\">\r\n      <div class=\"card\">\r\n        <div class=\"card-body\">\r\n          Daniel Słowik: kkasztann@gmail.com\r\n        </div>\r\n      </div>\r\n    </div>\r\n\r\n    <br>\r\n    <br> Jeżeli natomiast interesują Cię szczegóły naszego projektu, to kod źródłowy jest dostępny dla wszystkich na platformie GitHub:\r\n\r\n    <br>\r\n    <br>\r\n\r\n    <p class=\"lead\">\r\n      <a class=\"btn btn-outline-success btn-lg\" href=\"https://github.com/kkasztann/BeAwareAirInfoApplication\" target=\"_blank\" role=\"button\">Check on GitHub</a>\r\n    </p>\r\n\r\n    <br>\r\n    <br> Jeżeli chcesz wesprzeć BeAware w inny sposób, możesz równiez opowiedzieć o nas znajomym. Im nas więcej, tym więcej dobrego\r\n    dla powietrza w Polsce możemy zrobić.\r\n    <br> Za każdą formę udzielonego nam wsparcia serdecznie dziękujemy.<br>\r\n    <span class=\"like\"><i class=\"fa fa-gratipay\"></i></span>\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
 /***/ "./src/app/components/support/support.component.scss":
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = ".support-info {\n  text-align: center; }\n\n.like {\n  font-size: 5em; }\n"
 
 /***/ }),
 
@@ -1476,6 +1369,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var SupportComponent = /** @class */ (function () {
     function SupportComponent() {
+        this.isCollapsedMail1 = true;
+        this.isCollapsedMail2 = true;
     }
     SupportComponent.prototype.ngOnInit = function () {
     };
@@ -1497,7 +1392,7 @@ var SupportComponent = /** @class */ (function () {
 /***/ "./src/app/components/user/user.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"userSettingsDiv\" class=\"row\" *ngFor=\"let user of users\">\r\n  <div class=\"col-md-6 mx-auto mt-5\" *ngIf=\"userIDtoShow===user.myID\">\r\n    <div class=\"card\">\r\n      <div class=\"card-body\">\r\n        <h1 class=\"text-center\">User Settings\r\n          <i class=\"fa fa-user\"></i>\r\n        </h1>\r\n        <form (ngSubmit)=\"updateUser(user)\">\r\n          <div class=\"form-group\">\r\n            <label for=\"myID\">ID</label>\r\n            <input type=\"text\" name=\"myID\" id=\"myID\" [(ngModel)]=\"userIDtoShow\" placeholder=\"Your ID\" disabled class=\"form-control\">\r\n          </div>\r\n          <div class=\"form-group\">\r\n            <label for=\"name\">Nickname</label>\r\n            <input type=\"text\" name=\"name\" id=\"name\" [(ngModel)]=\"user.name\" placeholder=\"Your nickname\" class=\"form-control\">\r\n          </div>\r\n          <div class=\"form-group\">\r\n            <label for=\"sex\">Sex</label>\r\n            <div class=\"form-group\">\r\n              <div class=\"custom-control custom-radio\">\r\n                <input type=\"radio\" value=\"man\" id=\"man\" name=\"sex\" class=\"custom-control-input\" checked=\"\" [(ngModel)]=\"user.sex\">\r\n                <label class=\"custom-control-label\" for=\"man\">Man</label>\r\n              </div>\r\n              <div class=\"custom-control custom-radio\">\r\n                <input type=\"radio\" value=\"woman\" id=\"woman\" name=\"sex\" class=\"custom-control-input\" [(ngModel)]=\"user.sex\">\r\n                <label class=\"custom-control-label\" for=\"woman\">Woman</label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <div class=\"form-group\">\r\n            <select class=\"custom-select\" id=\"defaultLocation\" name=\"defaultStacja\" [(ngModel)]=\"user.defaultLocation\">\r\n              <option *ngFor=\"let s of wszystkieStacje\" [value]=\"s.id\">{{s.address.locality}} {{s.address.route}} {{s.address.streetNumber}} </option>\r\n            </select>\r\n          </div>\r\n          <input type=\"submit\" value=\"UPDATE INFO ABOUT ME\" class=\"btn btn-primary btn-block btn-lg\">\r\n        </form>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-md-6 mx-auto mt-2\">\r\n    <div class=\"card\">\r\n      <div class=\"card-body text-center\">\r\n        <h3>\r\n          <i class=\"fa fa-medkit\"></i> HEALTH INFO\r\n          <i class=\"fa fa-medkit\"></i>\r\n        </h3>\r\n      </div>\r\n      <div class=\"custom-control custom-checkbox\">\r\n        <input type=\"checkbox\" class=\"custom-control-input\" id=\"alergia\" [(ngModel)]=\"alergiaStan\">\r\n        <label class=\"custom-control-label\" for=\"alergia\" (click)=\"setSessionStorage('alergia', !getSessionStorage('alergia'))\">Mam alergię na szkodliwe pyły</label>\r\n      </div>\r\n      <div class=\"custom-control custom-checkbox\">\r\n        <input type=\"checkbox\" class=\"custom-control-input\" id=\"astma\" [(ngModel)]=\"astmaStan\">\r\n        <label class=\"custom-control-label\" for=\"astma\" (click)=\"setSessionStorage('astma', !getSessionStorage('astma'))\">Choruje na astme</label>\r\n      </div>\r\n      <div class=\"custom-control custom-checkbox\">\r\n        <input type=\"checkbox\" class=\"custom-control-input\" id=\"oskrzela\" [(ngModel)]=\"oskrzelaStan\">\r\n        <label class=\"custom-control-label\" for=\"oskrzela\" (click)=\"setSessionStorage('oskrzela', !getSessionStorage('oskrzela'))\">Choruje na zapalenie oskrzeli</label>\r\n      </div>\r\n      <div class=\"custom-control custom-checkbox\">\r\n        <input type=\"checkbox\" class=\"custom-control-input\" id=\"pluca\" [(ngModel)]=\"plucaStan\">\r\n        <label class=\"custom-control-label\" for=\"pluca\" (click)=\"setSessionStorage('pluca', !getSessionStorage('pluca'))\">Choruje na zapalenie płuc</label>\r\n      </div>\r\n      <div class=\"custom-control custom-checkbox\">\r\n        <input type=\"checkbox\" class=\"custom-control-input\" id=\"inne\" [(ngModel)]=\"inneStan\">\r\n        <label class=\"custom-control-label\" for=\"inne\" (click)=\"setSessionStorage('inne', !getSessionStorage('inne'))\">Choruje na inne choroby układu oddechowego</label>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div id=\"userSettingsDiv\" class=\"row\" *ngFor=\"let user of users\">\r\n  <div class=\"col-md-6 mx-auto mt-3\" *ngIf=\"userIDtoShow===user.myID\">\r\n    <div class=\"card\">\r\n      <div class=\"card-body\">\r\n        <h1 class=\"text-center\">User Settings\r\n          <i class=\"fa fa-user\"></i>\r\n        </h1>\r\n        <form (ngSubmit)=\"updateUser(user)\">\r\n          <div class=\"form-group\">\r\n            <label for=\"myID\">ID</label>\r\n            <input type=\"text\" name=\"myID\" id=\"myID\" [(ngModel)]=\"userIDtoShow\" placeholder=\"Your ID\" disabled class=\"form-control\">\r\n          </div>\r\n          <div class=\"form-group\">\r\n            <label for=\"name\">Nickname</label>\r\n            <input type=\"text\" name=\"name\" id=\"name\" [(ngModel)]=\"user.name\" placeholder=\"Your nickname\" class=\"form-control\">\r\n          </div>\r\n          <div class=\"form-group\">\r\n            <label for=\"sex\">Sex</label>\r\n            <div class=\"form-group\">\r\n              <div class=\"custom-control custom-radio\">\r\n                <input type=\"radio\" value=\"man\" id=\"man\" name=\"sex\" class=\"custom-control-input\" checked=\"\" [(ngModel)]=\"user.sex\">\r\n                <label class=\"custom-control-label\" for=\"man\">Man</label>\r\n              </div>\r\n              <div class=\"custom-control custom-radio\">\r\n                <input type=\"radio\" value=\"woman\" id=\"woman\" name=\"sex\" class=\"custom-control-input\" [(ngModel)]=\"user.sex\">\r\n                <label class=\"custom-control-label\" for=\"woman\">Woman</label>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <div class=\"form-group\">\r\n            <select class=\"custom-select\" id=\"defaultLocation\" name=\"defaultStacja\" [(ngModel)]=\"user.defaultLocation\">\r\n              <option *ngFor=\"let s of wszystkieStacje\" [value]=\"s.id\">{{s.address.locality}} {{s.address.route}} {{s.address.streetNumber}} </option>\r\n            </select>\r\n          </div>\r\n          <input type=\"submit\" value=\"UPDATE INFO ABOUT ME\" class=\"btn btn-primary btn-block btn-lg\">\r\n        </form>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-md-6 mx-auto mt-2\">\r\n    <div class=\"card\">\r\n      <div class=\"card-body text-center\">\r\n        <h3>\r\n          <i class=\"fa fa-medkit\"></i> HEALTH INFO\r\n          <i class=\"fa fa-medkit\"></i>\r\n        </h3>\r\n      </div>\r\n      <div class=\"custom-control custom-checkbox\">\r\n        <input type=\"checkbox\" class=\"custom-control-input\" id=\"alergia\" [(ngModel)]=\"alergiaStan\">\r\n        <label class=\"custom-control-label\" for=\"alergia\" (click)=\"setSessionStorage('alergia', !getSessionStorage('alergia'))\">Mam alergię na szkodliwe pyły</label>\r\n      </div>\r\n      <div class=\"custom-control custom-checkbox\">\r\n        <input type=\"checkbox\" class=\"custom-control-input\" id=\"astma\" [(ngModel)]=\"astmaStan\">\r\n        <label class=\"custom-control-label\" for=\"astma\" (click)=\"setSessionStorage('astma', !getSessionStorage('astma'))\">Choruje na astme</label>\r\n      </div>\r\n      <div class=\"custom-control custom-checkbox\">\r\n        <input type=\"checkbox\" class=\"custom-control-input\" id=\"oskrzela\" [(ngModel)]=\"oskrzelaStan\">\r\n        <label class=\"custom-control-label\" for=\"oskrzela\" (click)=\"setSessionStorage('oskrzela', !getSessionStorage('oskrzela'))\">Choruje na zapalenie oskrzeli</label>\r\n      </div>\r\n      <div class=\"custom-control custom-checkbox\">\r\n        <input type=\"checkbox\" class=\"custom-control-input\" id=\"pluca\" [(ngModel)]=\"plucaStan\">\r\n        <label class=\"custom-control-label\" for=\"pluca\" (click)=\"setSessionStorage('pluca', !getSessionStorage('pluca'))\">Choruje na zapalenie płuc</label>\r\n      </div>\r\n      <div class=\"custom-control custom-checkbox\">\r\n        <input type=\"checkbox\" class=\"custom-control-input\" id=\"inne\" [(ngModel)]=\"inneStan\">\r\n        <label class=\"custom-control-label\" for=\"inne\" (click)=\"setSessionStorage('inne', !getSessionStorage('inne'))\">Choruje na inne choroby układu oddechowego</label>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -1572,7 +1467,6 @@ var UserComponent = /** @class */ (function () {
             }
         });
         this.databaseService.getUser().subscribe(function (users) {
-            console.log(users);
             _this.users = users;
             for (_this.i = 0; _this.i < users.length; _this.i++) {
                 if (_this.userIDtoShow === users[_this.i].myID) {
@@ -1609,7 +1503,6 @@ var UserComponent = /** @class */ (function () {
     UserComponent.prototype.getStacjeObszar = function (latSW, longSW, latNE, longNE) {
         var _this = this;
         this.httpService.getStacjeObszar(latSW, longSW, latNE, longNE).retry(3).subscribe(function (stacje) {
-            console.log(stacje);
             _this.wszystkieStacje = stacje;
         }, function (error) {
             console.log(error);

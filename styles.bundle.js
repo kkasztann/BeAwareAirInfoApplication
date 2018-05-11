@@ -81,7 +81,7 @@ module.exports = "/*!\n *  Font Awesome 4.7.0 by @davegandy - http://fontawesome
 /***/ "./node_modules/raw-loader/index.js!./node_modules/postcss-loader/lib/index.js??embedded!./node_modules/sass-loader/lib/loader.js??ref--8-3!./src/styles.scss":
 /***/ (function(module, exports) {
 
-module.exports = "/* You can add global styles to this file, and also import other style files */\n.alert.flash-messages {\n  margin-top: 10px; }\n"
+module.exports = "/* You can add global styles to this file, and also import other style files */\n.alert.flash-messages {\n  margin-top: 10px; }\nbody {\n  background-image: url('bgimg.830f4c0eae342d28b420.png'); }\n.oppacity {\n  background: rgba(85, 113, 127, 0.8); }\n"
 
 /***/ }),
 
