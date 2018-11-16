@@ -19,4 +19,5 @@
 ### Raport prac każdego członka zespołu
   [Raport prac](https://docs.google.com/spreadsheets/d/1q2fU5GP4lZvmuYyWWzbNR2TBnqlo3yuleFN-M0qmZdQ/edit?usp=sharing)
   
+### Podgląd
   ![HowItWork](https://github.com/kkasztann/BeAwareAirInfoApplication/blob/master/howItWork.gif)
